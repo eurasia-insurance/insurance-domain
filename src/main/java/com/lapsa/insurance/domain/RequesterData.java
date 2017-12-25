@@ -1,7 +1,6 @@
 package com.lapsa.insurance.domain;
 
 import static com.lapsa.insurance.domain.DisplayNameElements.*;
-import static com.lapsa.international.phone.CountryCode.*;
 
 import java.util.Locale;
 import java.util.StringJoiner;
@@ -11,18 +10,12 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.validation.constraints.AssertTrue;
 
 import com.lapsa.international.localization.LocalizationLanguage;
 import com.lapsa.international.phone.PhoneNumber;
-import com.lapsa.international.phone.validators.ValidPhoneNumber;
 
 import tech.lapsa.java.commons.function.MyOptionals;
-import tech.lapsa.javax.validation.NotNullValue;
-import tech.lapsa.javax.validation.ValidEmail;
-import tech.lapsa.javax.validation.ValidHumanName;
 import tech.lapsa.kz.taxpayer.TaxpayerNumber;
-import tech.lapsa.kz.taxpayer.validators.ValidTaxpayerNumber;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Embeddable
@@ -33,23 +26,18 @@ public class RequesterData extends Domain {
 
     @Basic
     @Column(name = "REQUESTER_NAME")
-    @ValidHumanName
     private String name;
 
     @Basic
     @Column(name = "REQUESTER_EMAIL")
-    @ValidEmail
     private String email;
 
     @Basic
     @Column(name = "REQUESTER_ID_NUMBER")
-    @ValidTaxpayerNumber
     private TaxpayerNumber idNumber;
 
     @Basic
     @Column(name = "REQUESTER_PHONE_NUMBER")
-    @NotNullValue
-    @ValidPhoneNumber(countriesRequired = { KZ, RU, GE, BY, BY, CN, KG, UZ, UA })
     private PhoneNumber phone;
 
     @Basic
@@ -58,7 +46,6 @@ public class RequesterData extends Domain {
 
     @Basic
     @Column(name = "REQUESTER_ALLOW_PROCESS_PERSONAL_DATA")
-    @AssertTrue(message = "{com.lapsa.insurance.domain.RequesterData.allowProcessPersonalData.AssertTrue.message}")
     private boolean allowProcessPersonalData;
 
     @Basic

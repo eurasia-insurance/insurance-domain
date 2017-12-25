@@ -18,12 +18,10 @@ public abstract class SidedScannedDocument extends BaseEntity {
 
     @OneToOne(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(name = "FRONTSIDE_IMAGE_ID")
-    // @MaxImageFileSize(measure = FileSizeMeasure.MB, value = 10)
     private Image frontside;
 
     @OneToOne(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(name = "BACKSIDE_IMAGE_ID")
-    // @MaxImageFileSize(measure = FileSizeMeasure.MB, value = 10)
     private Image backside;
 
     @Override

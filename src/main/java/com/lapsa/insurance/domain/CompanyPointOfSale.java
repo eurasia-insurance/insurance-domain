@@ -28,8 +28,6 @@ import com.lapsa.international.localization.LocalizationLanguage;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.function.MyStrings;
-import tech.lapsa.javax.validation.NotEmptyString;
-import tech.lapsa.javax.validation.NotNullValue;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Entity
@@ -47,8 +45,6 @@ public class CompanyPointOfSale extends BaseEntity {
 
     @Basic
     @Column(name = "NAME")
-    @NotNullValue
-    @NotEmptyString
     private String name;
 
     @ElementCollection(fetch = FetchType.EAGER)

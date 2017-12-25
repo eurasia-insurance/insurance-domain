@@ -16,15 +16,11 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.lapsa.insurance.elements.IdentityCardType;
-import com.lapsa.insurance.validation.ValidIdentityCardType;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.function.MyStrings;
 import tech.lapsa.java.commons.localization.Localized;
 import tech.lapsa.java.commons.localization.Localizeds;
-import tech.lapsa.javax.validation.NotEmptyString;
-import tech.lapsa.javax.validation.NotNullValue;
-import tech.lapsa.javax.validation.ValidDateOfIssue;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Entity
@@ -37,27 +33,19 @@ public class IdentityCardData extends SidedScannedDocument {
     @Basic
     @Temporal(TemporalType.DATE)
     @Column(name = "DATE_OF_ISSUE")
-    @NotNullValue
-    @ValidDateOfIssue
     private LocalDate dateOfIssue;
 
     @Basic
     @Column(name = "ISSUING_AUTHORITY")
-    @NotNullValue
-    @NotEmptyString
     private String issuingAuthority;
 
     @Basic
     @Column(name = "NUMBER")
-    @NotNullValue
-    @NotEmptyString
     private String number;
 
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "TYPE")
-    @NotNullValue
-    @ValidIdentityCardType
     private IdentityCardType type;
 
     @Override

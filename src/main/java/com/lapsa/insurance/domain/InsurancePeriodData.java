@@ -14,10 +14,6 @@ import javax.persistence.TemporalType;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localizeds;
-import tech.lapsa.javax.validation.LocalDateComparison;
-import tech.lapsa.javax.validation.NotNullValue;
-import tech.lapsa.javax.validation.TemporalFuture;
-import tech.lapsa.javax.validation.TemporalLeftBeforeRight;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Embeddable
@@ -29,15 +25,11 @@ public class InsurancePeriodData extends Domain {
     @Basic
     @Temporal(TemporalType.DATE)
     @Column(name = "PERIOD_FROM")
-    @NotNullValue
-    @TemporalFuture(allowNow = true)
     private LocalDate from;
 
     @Basic
     @Temporal(TemporalType.DATE)
     @Column(name = "PERIOD_TO")
-    @NotNullValue
-    @TemporalFuture
     private LocalDate to;
 
     @Override
@@ -61,13 +53,6 @@ public class InsurancePeriodData extends Domain {
 
 	return sb.append(sj.toString()) //
 		.toString();
-    }
-
-    @TemporalLeftBeforeRight
-    // method must be a getter (name begins with "get"). validation is not
-    // processed if not
-    public LocalDateComparison getComparision() {
-	return new LocalDateComparison(from, to);
     }
 
     public LocalDate getFrom() {

@@ -6,12 +6,9 @@ import java.util.Locale;
 import java.util.StringJoiner;
 
 import com.lapsa.kz.country.KZCity;
-import com.lapsa.kz.country.validators.ValidKZCity;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localized;
-import tech.lapsa.javax.validation.NotEmptyString;
-import tech.lapsa.javax.validation.NotNullValue;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @HashCodePrime(103)
@@ -21,12 +18,8 @@ public class ResidenceData extends Domain {
 
     private Boolean resident;
 
-    @NotNullValue
-    @ValidKZCity
     private KZCity city;
 
-    @NotNullValue
-    @NotEmptyString
     private String address;
 
     @Override

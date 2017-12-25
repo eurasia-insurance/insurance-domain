@@ -22,12 +22,9 @@ import javax.persistence.UniqueConstraint;
 
 import com.lapsa.international.localization.LocalizationLanguage;
 import com.lapsa.kz.country.KZCity;
-import com.lapsa.kz.country.validators.ValidKZCity;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localized;
-import tech.lapsa.javax.validation.NotEmptyString;
-import tech.lapsa.javax.validation.NotNullValue;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Embeddable
@@ -38,21 +35,15 @@ public class PostAddress extends Domain {
 
     @Basic
     @Column(name = "ADDRESS_POSTINDEX")
-    @NotNullValue
-    @NotEmptyString
     private String postIndex;
 
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "ADDRESS_CITY")
-    @NotNullValue
-    @ValidKZCity(invalidValues = KZCity.OTHER)
     private KZCity city;
 
     @Basic
     @Column(name = "ADDRESS_STREET")
-    @NotNullValue
-    @NotEmptyString
     private String street;
 
     @ElementCollection(fetch = FetchType.EAGER)

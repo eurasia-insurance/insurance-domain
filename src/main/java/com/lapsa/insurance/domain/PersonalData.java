@@ -12,10 +12,6 @@ import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.function.MyStrings;
 import tech.lapsa.java.commons.localization.Localized;
 import tech.lapsa.java.commons.localization.Localizeds;
-import tech.lapsa.javax.validation.NotEmptyString;
-import tech.lapsa.javax.validation.NotNullValue;
-import tech.lapsa.javax.validation.ValidDateOfBirth;
-import tech.lapsa.javax.validation.ValidHumanName;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @HashCodePrime(71)
@@ -23,26 +19,14 @@ public class PersonalData extends Domain {
 
     private static final long serialVersionUID = 1L;
 
-    @NotNullValue
-    @NotEmptyString
-    @ValidHumanName
     private String name;
 
-    @NotNullValue
-    @NotEmptyString
-    @ValidHumanName
     private String surename;
 
-    @NotNullValue
-    @NotEmptyString
-    @ValidHumanName
     private String patronymic;
 
-    @NotNullValue
-    @ValidDateOfBirth
     private LocalDate dayOfBirth;
 
-    @NotNullValue
     private Sex sex;
 
     @Override
