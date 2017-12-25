@@ -14,7 +14,6 @@ import com.lapsa.insurance.elements.RequestSource;
 import com.lapsa.insurance.elements.TransactionProblem;
 import com.lapsa.insurance.elements.TransactionStatus;
 
-import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.javax.validation.NotNullValue;
 
 @Entity
