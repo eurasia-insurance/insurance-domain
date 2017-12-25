@@ -15,9 +15,6 @@ import javax.persistence.TemporalType;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localizeds;
-import tech.lapsa.javax.validation.NotEmptyString;
-import tech.lapsa.javax.validation.NotNullValue;
-import tech.lapsa.javax.validation.ValidDateOfIssue;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Entity
@@ -29,15 +26,11 @@ public class DriverLicenseData extends SidedScannedDocument {
 
     @Basic
     @Column(name = "NUMBER")
-    @NotNullValue
-    @NotEmptyString
     private String number;
 
     @Basic
     @Temporal(TemporalType.DATE)
     @Column(name = "DATE_OF_ISSUE")
-    @NotNullValue
-    @ValidDateOfIssue
     private LocalDate dateOfIssue;
 
     @Override

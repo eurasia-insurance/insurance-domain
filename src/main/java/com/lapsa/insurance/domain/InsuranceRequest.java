@@ -14,8 +14,6 @@ import com.lapsa.insurance.elements.RequestSource;
 import com.lapsa.insurance.elements.TransactionProblem;
 import com.lapsa.insurance.elements.TransactionStatus;
 
-import tech.lapsa.javax.validation.NotNullValue;
-
 @Entity
 @Table(name = "INSURANCE_REQUEST")
 public abstract class InsuranceRequest extends Request {
@@ -32,24 +30,20 @@ public abstract class InsuranceRequest extends Request {
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "RTYPE")
-    @NotNullValue
     protected InsuranceRequestType type = InsuranceRequestType.UNCOMPLETE;
 
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "TRANSACTION_STATUS")
-    @NotNullValue
     protected TransactionStatus transactionStatus;
 
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "TRANSACTION_PROBLEM")
-    @NotNullValue
     protected TransactionProblem transactionProblem;
 
     @Basic
     @Column(name = "AGREEMENT_NUMBER")
-    @NotNullValue
     protected String agreementNumber;
 
     @Embedded

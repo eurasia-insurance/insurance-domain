@@ -20,7 +20,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.Min;
 
 import com.lapsa.insurance.domain.BaseEntity;
 import com.lapsa.insurance.domain.Domain;
@@ -32,7 +31,6 @@ import tech.lapsa.java.commons.function.MyNumbers;
 import tech.lapsa.java.commons.function.MyObjects;
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.util.MyCurrencies;
-import tech.lapsa.javax.validation.NotNullValue;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Entity
@@ -71,14 +69,12 @@ public class Casco extends InsuranceProduct {
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "DEDUCTIBLE_PARTIAL_RATE")
-    @NotNullValue(message = "{com.lapsa.insurance.domain.casco.Casco.deductiblePartialRate.NotNullValue.message}")
     private CascoDeductiblePartialRate deductiblePartialRate;
 
     // франшиза на гибель/угон
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "DEDUCTIBLE_FULL_RATE")
-    @NotNullValue(message = "{com.lapsa.insurance.domain.casco.Casco.deductibleFullRate.NotNullValue.message}")
     private CascoDeductibleFullRate deductibleFullRate;
 
     // Спец. СТО для ТС до 3-х лет
@@ -135,8 +131,6 @@ public class Casco extends InsuranceProduct {
 
     @Basic
     @Column(name = "DRIVER_AND_PASSENGER_COUNT")
-    @NotNullValue
-    @Min(message = "{com.lapsa.insurance.domain.casco.Casco.driverAndPassengerCount.Min.message}", value = 1)
     private Integer driverAndPassengerCount;
 
     @Override

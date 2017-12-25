@@ -13,9 +13,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import tech.lapsa.java.commons.function.MyOptionals;
-import tech.lapsa.javax.validation.NotNullValue;
 import tech.lapsa.kz.taxpayer.TaxpayerNumber;
-import tech.lapsa.kz.taxpayer.validators.ValidTaxpayerNumber;
 
 @Entity
 @Table(name = "DRIVER")
@@ -26,8 +24,6 @@ public abstract class Driver extends BaseEntity {
 
     @Basic
     @Column(name = "ID_NUMBER")
-    @NotNullValue
-    @ValidTaxpayerNumber
     protected TaxpayerNumber idNumber;
 
     @Transient

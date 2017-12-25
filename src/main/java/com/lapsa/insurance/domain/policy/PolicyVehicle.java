@@ -17,12 +17,9 @@ import com.lapsa.insurance.domain.Vehicle;
 import com.lapsa.insurance.domain.VehicleCertificateData;
 import com.lapsa.insurance.elements.VehicleAgeClass;
 import com.lapsa.insurance.elements.VehicleClass;
-import com.lapsa.insurance.validation.ValidPolicyVehicleAgeClass;
-import com.lapsa.insurance.validation.ValidPolicyVehicleClass;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localized;
-import tech.lapsa.javax.validation.NotNullValue;
 import tech.lapsa.kz.vehicle.VehicleRegNumber;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
@@ -36,15 +33,11 @@ public class PolicyVehicle extends Vehicle {
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "VEHICLE_CLASS")
-    @NotNullValue
-    @ValidPolicyVehicleClass
     private VehicleClass vehicleClass;
 
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "VEHICLE_AGE_CLASS")
-    @NotNullValue
-    @ValidPolicyVehicleAgeClass
     private VehicleAgeClass vehicleAgeClass;
 
     @Basic

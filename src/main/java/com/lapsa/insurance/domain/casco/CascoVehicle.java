@@ -17,8 +17,6 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 
 import com.lapsa.insurance.domain.Image;
 import com.lapsa.insurance.domain.Vehicle;
@@ -30,9 +28,6 @@ import tech.lapsa.java.commons.function.MyObjects;
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localized;
 import tech.lapsa.java.commons.util.MyCurrencies;
-import tech.lapsa.javax.validation.NotNullValue;
-import tech.lapsa.javax.validation.NotTooOldYearOfIssue;
-import tech.lapsa.javax.validation.NotTooYoungYearOfIssue;
 import tech.lapsa.kz.vehicle.VehicleRegNumber;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
@@ -45,35 +40,27 @@ public class CascoVehicle extends Vehicle {
 
     @Basic
     @Column(name = "VEHICLE_COST")
-    @NotNullValue
-    @Min(message = "{com.lapsa.insurance.domain.casco.CascoVehicle.cost.Min.message}", value = 1000000)
-    @Max(message = "{com.lapsa.insurance.domain.casco.CascoVehicle.cost.Max.message}", value = 52500000)
     private Double cost;
 
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "VEHICLE_CAR_AGE_CLASS")
-    @NotNullValue
     private CascoCarAgeClass carAgeClass;
 
     @OneToOne(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(name = "VIEW1_IMAGE_ID")
-    // @MaxImageFileSize(measure = FileSizeMeasure.MB, value = 10)
     private Image view1;
 
     @OneToOne(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(name = "VIEW2_IMAGE_ID")
-    // @MaxImageFileSize(measure = FileSizeMeasure.MB, value = 10)
     private Image view2;
 
     @OneToOne(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(name = "VIEW3_IMAGE_ID")
-    // @MaxImageFileSize(measure = FileSizeMeasure.MB, value = 10)
     private Image view3;
 
     @OneToOne(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(name = "VIEW4_IMAGE_ID")
-    // @MaxImageFileSize(measure = FileSizeMeasure.MB, value = 10)
     private Image view4;
 
     @Override
@@ -125,14 +112,6 @@ public class CascoVehicle extends Vehicle {
 
     public void setCost(final Double cost) {
 	this.cost = cost;
-    }
-
-    @NotNullValue
-    @NotTooOldYearOfIssue(message = "{com.lapsa.insurance.domain.casco.CascoVehicle.yearOfManufacture.NotTooOldYearOfIssue.message}", maxAge = 10)
-    @NotTooYoungYearOfIssue(message = "{com.lapsa.insurance.domain.casco.CascoVehicle.yearOfManufacture.NotTooYoungYearOfIssue.message}", minAge = 0)
-    @Override
-    public Integer getYearOfManufacture() {
-	return super.getYearOfManufacture();
     }
 
     public CascoCarAgeClass getCarAgeClass() {

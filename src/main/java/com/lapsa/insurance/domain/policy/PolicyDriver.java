@@ -18,13 +18,9 @@ import com.lapsa.insurance.domain.PersonalData;
 import com.lapsa.insurance.elements.InsuranceClassType;
 import com.lapsa.insurance.elements.InsuredAgeClass;
 import com.lapsa.insurance.elements.InsuredExpirienceClass;
-import com.lapsa.insurance.validation.ValidInsuranceAgeClass;
-import com.lapsa.insurance.validation.ValidInsuranceClassType;
-import com.lapsa.insurance.validation.ValidInsuranceExpirienceClass;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localized;
-import tech.lapsa.javax.validation.NotNullValue;
 import tech.lapsa.kz.taxpayer.TaxpayerNumber;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
@@ -38,22 +34,16 @@ public class PolicyDriver extends Driver {
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "INSURANCE_CLASS")
-    @NotNullValue
-    @ValidInsuranceClassType
     private InsuranceClassType insuranceClassType;
 
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "AGE_CLASS")
-    @NotNullValue
-    @ValidInsuranceAgeClass
     private InsuredAgeClass ageClass;
 
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "EXPIRIENCE_CLASS")
-    @NotNullValue
-    @ValidInsuranceExpirienceClass
     private InsuredExpirienceClass expirienceClass;
 
     @Transient

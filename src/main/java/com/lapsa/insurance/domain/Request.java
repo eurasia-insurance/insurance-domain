@@ -29,7 +29,6 @@ import com.lapsa.insurance.elements.RequestSource;
 import com.lapsa.insurance.elements.RequestStatus;
 
 import tech.lapsa.java.commons.function.MyOptionals;
-import tech.lapsa.javax.validation.NotNullValue;
 
 @Entity
 @Table(name = "REQUEST", indexes = { //
@@ -77,19 +76,16 @@ public abstract class Request extends BaseEntity {
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "SOURCE")
-    @NotNullValue
     protected RequestSource source;
 
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "STATUS")
-    @NotNullValue
     protected RequestStatus status = RequestStatus.OPEN;
 
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "PROGRESS_STATUS")
-    @NotNullValue
     protected ProgressStatus progressStatus = ProgressStatus.NEW;
 
     @Embedded

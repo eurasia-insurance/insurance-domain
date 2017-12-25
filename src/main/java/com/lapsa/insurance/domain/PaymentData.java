@@ -18,7 +18,6 @@ import com.lapsa.insurance.elements.PaymentStatus;
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localized;
 import tech.lapsa.java.commons.localization.Localizeds;
-import tech.lapsa.javax.validation.NotNullValue;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Embeddable
@@ -30,7 +29,6 @@ public class PaymentData extends Domain {
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "PAYMENT_STATUS")
-    @NotNullValue
     private PaymentStatus status = PaymentStatus.UNDEFINED;
 
     @Basic

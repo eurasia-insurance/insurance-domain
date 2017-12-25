@@ -15,11 +15,7 @@ import javax.persistence.TemporalType;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localizeds;
-import tech.lapsa.javax.validation.NotEmptyString;
-import tech.lapsa.javax.validation.NotNullValue;
-import tech.lapsa.javax.validation.ValidDateOfIssue;
 import tech.lapsa.kz.vehicle.VehicleRegNumber;
-import tech.lapsa.kz.vehicle.validators.ValidVehicleRegNumber;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Entity
@@ -31,22 +27,15 @@ public class VehicleCertificateData extends SidedScannedDocument {
 
     @Basic
     @Column(name = "VEHICLE_REGISTRATION_NUMBER")
-    @NotNullValue
-    @NotEmptyString
-    @ValidVehicleRegNumber
     private VehicleRegNumber registrationNumber;
 
     @Basic
     @Column(name = "VEHICLE_CERTITFICATE_NUMBER")
-    @NotNullValue
-    @NotEmptyString
     private String number;
 
     @Basic
     @Temporal(TemporalType.DATE)
     @Column(name = "DATE_OF_ISSUE")
-    @NotNullValue
-    @ValidDateOfIssue
     private LocalDate dateOfIssue;
 
     @Override

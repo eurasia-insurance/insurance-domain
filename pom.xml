@@ -22,10 +22,8 @@
 		<payara-bom.version>4.1.2-2-SNAPSHOT</payara-bom.version>
 		<!-- tech -->
 		<javax-jpa-commons.version>1.1-SNAPSHOT</javax-jpa-commons.version>
-		<javax-validation-commons.version>1.1-SNAPSHOT</javax-validation-commons.version>
 		<patterns-domain.version>1.0-SNAPSHOT</patterns-domain.version>
 		<lapsa-arquillian-test.version>1.1-SNAPSHOT</lapsa-arquillian-test.version>
-		<insurance-validation.version>1.0-SNAPSHOT</insurance-validation.version>
 		<!-- oldies -->
 		<insurance-lib.version>2.4-SNAPSHOT</insurance-lib.version>
 		<kz-lib.version>3.2-SNAPSHOT</kz-lib.version>
@@ -68,11 +66,6 @@
 				<version>${javax-jpa-commons.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>tech.lapsa.javax</groupId>
-				<artifactId>javax-validation-commons</artifactId>
-				<version>${javax-validation-commons.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>tech.lapsa.patterns</groupId>
 				<artifactId>patterns-domain</artifactId>
 				<version>${patterns-domain.version}</version>
@@ -81,11 +74,6 @@
 				<groupId>tech.lapsa.lapsa</groupId>
 				<artifactId>lapsa-arquillian-test</artifactId>
 				<version>${lapsa-arquillian-test.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>tech.lapsa.insurance</groupId>
-				<artifactId>insurance-validation</artifactId>
-				<version>${insurance-validation.version}</version>
 			</dependency>
 			<!-- oldies -->
 			<dependency>
@@ -148,18 +136,6 @@
 			<scope>compile</scope>
 			<optional>false</optional>
 		</dependency>
-		<dependency>
-			<groupId>tech.lapsa.insurance</groupId>
-			<artifactId>insurance-validation</artifactId>
-			<scope>compile</scope>
-			<optional>false</optional>
-		</dependency>
-		<dependency>
-			<groupId>tech.lapsa.javax</groupId>
-			<artifactId>javax-validation-commons</artifactId>
-			<scope>compile</scope>
-			<optional>false</optional>
-		</dependency>
 		<!-- oldies -->
 		<dependency>
 			<groupId>com.lapsa.insurance-lib</groupId>
@@ -204,11 +180,6 @@
 			</exclusions>
 		</dependency>
 		<!-- Java EE -->
-		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>javax.persistence</artifactId>
