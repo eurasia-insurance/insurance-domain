@@ -1,5 +1,0 @@
-com.lapsa.insurance.elements.IdentityCardType.ID_CARD           = удостоверение личности
-com.lapsa.insurance.elements.IdentityCardType.PASSPORT          = паспорт
-com.lapsa.insurance.elements.IdentityCardType.BIRTH_CERTIFICATE = свидетельство о рождении
-com.lapsa.insurance.elements.IdentityCardType.RESIDENCE_PERMIT  = вид на жительство иностранца
-com.lapsa.insurance.elements.IdentityCardType.DIPLOMATIC_PASSPORT = дипломатический паспорт

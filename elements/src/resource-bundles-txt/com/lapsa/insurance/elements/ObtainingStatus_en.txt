@@ -1,8 +1,0 @@
-com.lapsa.insurance.elements.ObtainingStatus.PENDING         = Pending receipt
-com.lapsa.insurance.elements.ObtainingStatus.PENDING.short   = Pending
-com.lapsa.insurance.elements.ObtainingStatus.DONE            = Received
-com.lapsa.insurance.elements.ObtainingStatus.DONE.short      = Received 
-com.lapsa.insurance.elements.ObtainingStatus.CANCELED        = Cancelled
-com.lapsa.insurance.elements.ObtainingStatus.CANCELED.short  = Cancelled
-com.lapsa.insurance.elements.ObtainingStatus.UNDEFINED       = Undefined 
-com.lapsa.insurance.elements.ObtainingStatus.UNDEFINED.short = Undefined 

@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.SubjectType.COMPANY = Legal Entity
-com.lapsa.insurance.elements.SubjectType.PERSON  = Individual

@@ -1,3 +1,0 @@
-com.lapsa.insurance.elements.CascoCarAgeClass.FROM3TO7 = от 3-х до 7 лет
-com.lapsa.insurance.elements.CascoCarAgeClass.UNDER3   = до 3-х лет
-com.lapsa.insurance.elements.CascoCarAgeClass.OTHER7   = старше 7 лет

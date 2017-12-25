@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.InsuredAgeAndExpirienceClass.OVER25_MORE2  = Жасы 25 жастан жоғары, жүргізу өтілі 2 жылдан артық
-com.lapsa.insurance.elements.InsuredAgeAndExpirienceClass.UNDER25_LESS2 = жасы 25 жастан кіші, жүргізу өтілі 2 жылдан аз
-com.lapsa.insurance.elements.InsuredAgeAndExpirienceClass.UNDER25_MORE2 = жасы 25 жастан  кіші, жүргізу өтілі 2 жылдан артық
-com.lapsa.insurance.elements.InsuredAgeAndExpirienceClass.OVER25_LESS2  = жасы 25 жастан жоғары, жүргізу өтілі 2 жылдан кем емес

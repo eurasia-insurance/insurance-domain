@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.ProgressStatus.NEW        = Новая
-com.lapsa.insurance.elements.ProgressStatus.ON_PROCESS = В обработке
-com.lapsa.insurance.elements.ProgressStatus.ON_HOLD    = На паузе
-com.lapsa.insurance.elements.ProgressStatus.FINISHED   = Завершено

@@ -1,8 +1,0 @@
-com.lapsa.insurance.elements.ObtainingStatus.PENDING         = Алу күтілуде
-com.lapsa.insurance.elements.ObtainingStatus.PENDING.short   = күтілуде
-com.lapsa.insurance.elements.ObtainingStatus.DONE            = Алынды
-com.lapsa.insurance.elements.ObtainingStatus.DONE.short      = алынды
-com.lapsa.insurance.elements.ObtainingStatus.CANCELED        = Жойылды
-com.lapsa.insurance.elements.ObtainingStatus.CANCELED.short  = жойылды
-com.lapsa.insurance.elements.ObtainingStatus.UNDEFINED       = Анықталмаған
-com.lapsa.insurance.elements.ObtainingStatus.UNDEFINED.short = анықталмаған

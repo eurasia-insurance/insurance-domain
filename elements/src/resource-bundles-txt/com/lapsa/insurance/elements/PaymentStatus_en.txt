@@ -1,8 +1,0 @@
-com.lapsa.insurance.elements.PaymentStatus.PENDING         = Pending payment
-com.lapsa.insurance.elements.PaymentStatus.PENDING.short   = Pending
-com.lapsa.insurance.elements.PaymentStatus.DONE            = Paid
-com.lapsa.insurance.elements.PaymentStatus.DONE.short      = Paid
-com.lapsa.insurance.elements.PaymentStatus.CANCELED        = Cancelled
-com.lapsa.insurance.elements.PaymentStatus.CANCELED.short  = Cancelled
-com.lapsa.insurance.elements.PaymentStatus.UNDEFINED       = Undefined
-com.lapsa.insurance.elements.PaymentStatus.UNDEFINED.short = Undefined

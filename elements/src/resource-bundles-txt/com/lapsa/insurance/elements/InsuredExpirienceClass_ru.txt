@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.InsuredExpirienceClass.MORE2       = стаж вождения более 2 лет
-com.lapsa.insurance.elements.InsuredExpirienceClass.MORE2.short = более 2 лет
-com.lapsa.insurance.elements.InsuredExpirienceClass.LESS2       = стаж вождения менее 2 лет
-com.lapsa.insurance.elements.InsuredExpirienceClass.LESS2.short = менее 2 лет

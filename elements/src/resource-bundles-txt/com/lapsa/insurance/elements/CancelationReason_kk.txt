@@ -1,8 +1,0 @@
-com.lapsa.insurance.elements.CancelationReason.CANCELATION_AND_RENEW   = Шарттың мерзімінен бұрын тоқтатылуы және жаңасының жасалуы
-com.lapsa.insurance.elements.CancelationReason.CANCELATION             = Мерзімінен бұрын бұзу
-com.lapsa.insurance.elements.CancelationReason.MADE_INSURANCE_PAYMENT  = Сақтандыру төлемі жүргізілді
-com.lapsa.insurance.elements.CancelationReason.PREMIUM_COST_ERROR      = Есептелген сыйақының түзетуі дұрыс емес
-com.lapsa.insurance.elements.CancelationReason.POLICY_LOST             = Жоғалту
-com.lapsa.insurance.elements.CancelationReason.ISSUED_DUPLICATE_POLICY = Телнұсқасы шығарылды
-com.lapsa.insurance.elements.CancelationReason.OTHER                   = Басқа себеп
-com.lapsa.insurance.elements.CancelationReason.HUMAN_FAILURE           = Оператордың қателігі

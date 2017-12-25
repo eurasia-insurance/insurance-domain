@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.RequestSource.API            = Заявка через API веб-сервиса 
-com.lapsa.insurance.elements.RequestSource.API.short      = API 
-com.lapsa.insurance.elements.RequestSource.INTERNAL       = Собственное Web-приложение
-com.lapsa.insurance.elements.RequestSource.INTERNAL.short = WEB

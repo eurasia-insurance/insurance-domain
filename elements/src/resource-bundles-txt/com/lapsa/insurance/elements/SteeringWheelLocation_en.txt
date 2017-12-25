@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.SteeringWheelLocation.RIGHT_SIDE = right-side steering wheel
-com.lapsa.insurance.elements.SteeringWheelLocation.LEFT_SIDE  = left-side steering wheel

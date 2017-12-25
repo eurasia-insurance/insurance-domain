@@ -1,8 +1,0 @@
-com.lapsa.insurance.elements.ObtainingStatus.PENDING         = Получение ожидается
-com.lapsa.insurance.elements.ObtainingStatus.PENDING.short   = ожидается
-com.lapsa.insurance.elements.ObtainingStatus.DONE            = Получено
-com.lapsa.insurance.elements.ObtainingStatus.DONE.short      = получено
-com.lapsa.insurance.elements.ObtainingStatus.CANCELED        = Отменено
-com.lapsa.insurance.elements.ObtainingStatus.CANCELED.short  = отменено
-com.lapsa.insurance.elements.ObtainingStatus.UNDEFINED       = Не определено
-com.lapsa.insurance.elements.ObtainingStatus.UNDEFINED.short = не определено

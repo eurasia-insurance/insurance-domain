@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.InsuredAgeClass.OVER25        = жасы 25 жастан жоғары
-com.lapsa.insurance.elements.InsuredAgeClass.OVER25.short  = 25 жастан жоғары
-com.lapsa.insurance.elements.InsuredAgeClass.UNDER25       = жасы 25 жастан кіші
-com.lapsa.insurance.elements.InsuredAgeClass.UNDER25.short = 25 жастан кіші

@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.SteeringWheelLocation.RIGHT_SIDE = руль справа
-com.lapsa.insurance.elements.SteeringWheelLocation.LEFT_SIDE  = руль слева

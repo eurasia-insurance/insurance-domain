@@ -1,7 +1,0 @@
-com.lapsa.insurance.elements.DeliveryTimeSlot.DURING_THE_DAY       = бір күн ішінде
-com.lapsa.insurance.elements.DeliveryTimeSlot.BEFORE_LUNCH         = күннің бірінші жартысында  9:00 бастап 13:00 дейін)
-com.lapsa.insurance.elements.DeliveryTimeSlot.BEFORE_LUNCH.short   = күннің бірінші жартысында
-com.lapsa.insurance.elements.DeliveryTimeSlot.AFTER_LUNCH          = күннің екінші жартысында (13:00 бастап 18:00 дейін)
-com.lapsa.insurance.elements.DeliveryTimeSlot.AFTER_LUNCH.short    = күннің екінші жартысында
-com.lapsa.insurance.elements.DeliveryTimeSlot.EVENING              = кешек (18:00 бастап 21:00 дейін)
-com.lapsa.insurance.elements.DeliveryTimeSlot.EVENING.short        = кешек

@@ -1,6 +1,0 @@
-com.lapsa.insurance.elements.ObtainingMethod.DELIVERY        = courier delivery
-com.lapsa.insurance.elements.ObtainingMethod.DELIVERY.short  = courier delivery
-com.lapsa.insurance.elements.ObtainingMethod.PICKUP          = pick-up at the insurance company office
-com.lapsa.insurance.elements.ObtainingMethod.PICKUP.short    = pick-up at the insurance company office
-com.lapsa.insurance.elements.ObtainingMethod.UNDEFINED       = undefined
-com.lapsa.insurance.elements.ObtainingMethod.UNDEFINED.short = undefined

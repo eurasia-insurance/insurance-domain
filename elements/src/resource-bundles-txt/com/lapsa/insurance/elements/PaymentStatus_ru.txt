@@ -1,8 +1,0 @@
-com.lapsa.insurance.elements.PaymentStatus.PENDING         = Оплата ожидается
-com.lapsa.insurance.elements.PaymentStatus.PENDING.short   = ожидается
-com.lapsa.insurance.elements.PaymentStatus.DONE            = Оплачено
-com.lapsa.insurance.elements.PaymentStatus.DONE.short      = оплачено
-com.lapsa.insurance.elements.PaymentStatus.CANCELED        = Отменено
-com.lapsa.insurance.elements.PaymentStatus.CANCELED.short  = отменено
-com.lapsa.insurance.elements.PaymentStatus.UNDEFINED       = Не определено
-com.lapsa.insurance.elements.PaymentStatus.UNDEFINED.short = не определено

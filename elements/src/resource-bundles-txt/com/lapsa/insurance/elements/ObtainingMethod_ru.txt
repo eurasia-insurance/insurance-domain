@@ -1,6 +1,0 @@
-com.lapsa.insurance.elements.ObtainingMethod.DELIVERY        = Доставить курьером
-com.lapsa.insurance.elements.ObtainingMethod.DELIVERY.short  = доставить курьером
-com.lapsa.insurance.elements.ObtainingMethod.PICKUP          = Забрать самостоятельно в офисе страховой компании
-com.lapsa.insurance.elements.ObtainingMethod.PICKUP.short    = забрать самостоятельно
-com.lapsa.insurance.elements.ObtainingMethod.UNDEFINED       = Не определено
-com.lapsa.insurance.elements.ObtainingMethod.UNDEFINED.short = не определено

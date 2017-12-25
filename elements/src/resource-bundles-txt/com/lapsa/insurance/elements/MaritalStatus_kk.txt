@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.MaritalStatus.MARRIED = үйленген / тұрмыста
-com.lapsa.insurance.elements.MaritalStatus.SINGLE  = бойдақ / тұрмыста емес

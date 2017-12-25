@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.InsuredAgeClass.OVER25        = возраст старше 25 лет
-com.lapsa.insurance.elements.InsuredAgeClass.OVER25.short  = старше 25 лет
-com.lapsa.insurance.elements.InsuredAgeClass.UNDER25       = возраст моложе 25 лет
-com.lapsa.insurance.elements.InsuredAgeClass.UNDER25.short = моложе 25 лет

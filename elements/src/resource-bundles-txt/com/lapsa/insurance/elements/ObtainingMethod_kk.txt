@@ -1,6 +1,0 @@
-com.lapsa.insurance.elements.ObtainingMethod.DELIVERY        = Курьермен жеткізу
-com.lapsa.insurance.elements.ObtainingMethod.DELIVERY.short  = курьермен жеткізу
-com.lapsa.insurance.elements.ObtainingMethod.PICKUP          = Өз бетінше сақтандыру компаниясының кеңсесінен алып кету
-com.lapsa.insurance.elements.ObtainingMethod.PICKUP.short    = өз бетінше алып кету
-com.lapsa.insurance.elements.ObtainingMethod.UNDEFINED       = Анықталмаған
-com.lapsa.insurance.elements.ObtainingMethod.UNDEFINED.short = анықталмаған

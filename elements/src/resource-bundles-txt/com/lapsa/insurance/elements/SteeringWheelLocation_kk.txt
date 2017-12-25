@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.SteeringWheelLocation.RIGHT_SIDE = рулі сол жағында
-com.lapsa.insurance.elements.SteeringWheelLocation.LEFT_SIDE  = рулі оң жағында

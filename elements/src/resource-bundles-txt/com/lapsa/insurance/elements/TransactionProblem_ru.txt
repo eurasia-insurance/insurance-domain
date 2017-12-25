@@ -1,5 +1,0 @@
-com.lapsa.insurance.elements.TransactionProblem.CANCELED_BY_CONSUMER = Отменено клиентом
-com.lapsa.insurance.elements.TransactionProblem.WRONG_DATA_PROVIDED  = Предоставлены неверные данные
-com.lapsa.insurance.elements.TransactionProblem.TEST                 = Тестовая заявка
-com.lapsa.insurance.elements.TransactionProblem.DUPLICATE            = Дублирует другую заявку
-com.lapsa.insurance.elements.TransactionProblem.OTHER                = Другая причина

@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.InsuredAgeAndExpirienceClass.OVER25_MORE2  = age over 25, driving experience more than 2 years
-com.lapsa.insurance.elements.InsuredAgeAndExpirienceClass.UNDER25_LESS2 = age under 25, driving experience less than 2 years
-com.lapsa.insurance.elements.InsuredAgeAndExpirienceClass.UNDER25_MORE2 = age over 25, driving experience more than 2 years
-com.lapsa.insurance.elements.InsuredAgeAndExpirienceClass.OVER25_LESS2  = age under 25, driving experience less than 2 years

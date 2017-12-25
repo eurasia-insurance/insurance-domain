@@ -1,8 +1,0 @@
-com.lapsa.insurance.elements.PaymentStatus.PENDING         = Төлем күтілуде
-com.lapsa.insurance.elements.PaymentStatus.PENDING.short   = күтілуде
-com.lapsa.insurance.elements.PaymentStatus.DONE            = Төленді
-com.lapsa.insurance.elements.PaymentStatus.DONE.short      = төленді
-com.lapsa.insurance.elements.PaymentStatus.CANCELED        = Жойылды
-com.lapsa.insurance.elements.PaymentStatus.CANCELED.short  = жойылды
-com.lapsa.insurance.elements.PaymentStatus.UNDEFINED       = Анықталмаған
-com.lapsa.insurance.elements.PaymentStatus.UNDEFINED.short = анықталмаған
