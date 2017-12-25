@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.RequestSource.API            = Өтінім API веб-сервис арқылы 
-com.lapsa.insurance.elements.RequestSource.API.short      = API 
-com.lapsa.insurance.elements.RequestSource.INTERNAL       = Жеке Web-осымша
-com.lapsa.insurance.elements.RequestSource.INTERNAL.short = WEB

@@ -1,6 +1,0 @@
-com.lapsa.insurance.elements.InsuranceRequestType.ONLINE           = Online application
-com.lapsa.insurance.elements.InsuranceRequestType.ONLINE.short     = Online
-com.lapsa.insurance.elements.InsuranceRequestType.EXPRESS          = Express Order
-com.lapsa.insurance.elements.InsuranceRequestType.EXPRESS.short    = Express
-com.lapsa.insurance.elements.InsuranceRequestType.UNCOMPLETE       = Uncompleted application (lead)
-com.lapsa.insurance.elements.InsuranceRequestType.UNCOMPLETE.short = lead

@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.MaritalStatus.MARRIED = married
-com.lapsa.insurance.elements.MaritalStatus.SINGLE  = single

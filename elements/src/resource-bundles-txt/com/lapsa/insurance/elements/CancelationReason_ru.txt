@@ -1,8 +1,0 @@
-com.lapsa.insurance.elements.CancelationReason.CANCELATION_AND_RENEW   = Досрочное прекращение договора и заключение нового
-com.lapsa.insurance.elements.CancelationReason.CANCELATION             = Досрочное расторжение
-com.lapsa.insurance.elements.CancelationReason.MADE_INSURANCE_PAYMENT  = Произведена страховая выплата
-com.lapsa.insurance.elements.CancelationReason.PREMIUM_COST_ERROR      = Корректировка неверно рассчитанной премии
-com.lapsa.insurance.elements.CancelationReason.POLICY_LOST             = Утеря
-com.lapsa.insurance.elements.CancelationReason.ISSUED_DUPLICATE_POLICY = Выпущен дубликат
-com.lapsa.insurance.elements.CancelationReason.OTHER                   = Другая причина
-com.lapsa.insurance.elements.CancelationReason.HUMAN_FAILURE           = Ошибка оператора

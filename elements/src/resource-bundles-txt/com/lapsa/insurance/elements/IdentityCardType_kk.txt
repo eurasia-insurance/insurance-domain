@@ -1,5 +1,0 @@
-com.lapsa.insurance.elements.IdentityCardType.ID_CARD           = жеке куәлік
-com.lapsa.insurance.elements.IdentityCardType.PASSPORT          = паспорт
-com.lapsa.insurance.elements.IdentityCardType.BIRTH_CERTIFICATE = ттуу туралы куәлік
-com.lapsa.insurance.elements.IdentityCardType.RESIDENCE_PERMIT  = шетел азаматының ықтиярхаты
-com.lapsa.insurance.elements.IdentityCardType.DIPLOMATIC_PASSPORT = =KAZ= дипломатический паспорт

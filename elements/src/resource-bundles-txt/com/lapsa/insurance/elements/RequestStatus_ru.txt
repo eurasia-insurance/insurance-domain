@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.RequestStatus.OPEN   = Открыто
-com.lapsa.insurance.elements.RequestStatus.CLOSED = Закрыто

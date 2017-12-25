@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.VehicleAgeClass.UNDER7 = До 7 лет включительно
-com.lapsa.insurance.elements.VehicleAgeClass.OVER7  = Свыше 7 лет

@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.InsuranceProductType.CASCO        = Авто КАСКО
-com.lapsa.insurance.elements.InsuranceProductType.CASCO.short  = КАСКО
-com.lapsa.insurance.elements.InsuranceProductType.POLICY       = КҚИ АҚЖ МС полисі
-com.lapsa.insurance.elements.InsuranceProductType.POLICY.short = Полис

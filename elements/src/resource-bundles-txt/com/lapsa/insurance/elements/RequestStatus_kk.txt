@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.RequestStatus.OPEN   = Ашық
-com.lapsa.insurance.elements.RequestStatus.CLOSED = Жабық

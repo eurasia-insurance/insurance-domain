@@ -1,6 +1,0 @@
-com.lapsa.insurance.elements.InsuranceRequestType.ONLINE           = Он-лайн заявка
-com.lapsa.insurance.elements.InsuranceRequestType.ONLINE.short     = Он-лайн
-com.lapsa.insurance.elements.InsuranceRequestType.EXPRESS          = Экспресс заявка
-com.lapsa.insurance.elements.InsuranceRequestType.EXPRESS.short    = Экспресс
-com.lapsa.insurance.elements.InsuranceRequestType.UNCOMPLETE       = Незавершеная заявка (лид)
-com.lapsa.insurance.elements.InsuranceRequestType.UNCOMPLETE.short = Лид

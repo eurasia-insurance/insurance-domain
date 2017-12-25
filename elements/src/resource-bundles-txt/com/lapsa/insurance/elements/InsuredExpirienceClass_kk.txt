@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.InsuredExpirienceClass.MORE2       = жүргзу өтілі 2 жылдан артық
-com.lapsa.insurance.elements.InsuredExpirienceClass.MORE2.short = 2 жылдан артық
-com.lapsa.insurance.elements.InsuredExpirienceClass.LESS2       = жүргізу өтілі 2 жылдан аз
-com.lapsa.insurance.elements.InsuredExpirienceClass.LESS2.short = 2 жылдан аз

@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.MaritalStatus.MARRIED = женат / замужем
-com.lapsa.insurance.elements.MaritalStatus.SINGLE  = холост / незамужем

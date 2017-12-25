@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.SubjectType.COMPANY = Заңды тұлға
-com.lapsa.insurance.elements.SubjectType.PERSON  = Жеке тұлға

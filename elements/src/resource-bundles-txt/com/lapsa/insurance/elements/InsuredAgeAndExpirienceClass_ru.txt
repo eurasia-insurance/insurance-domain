@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.InsuredAgeAndExpirienceClass.OVER25_MORE2  = возраст старше 25 лет, стаж вождения более 2 лет
-com.lapsa.insurance.elements.InsuredAgeAndExpirienceClass.UNDER25_LESS2 = возраст моложе 25 лет, стаж вождения менее 2 лет
-com.lapsa.insurance.elements.InsuredAgeAndExpirienceClass.UNDER25_MORE2 = возраст моложе 25 лет, стаж вождения более 2 лет
-com.lapsa.insurance.elements.InsuredAgeAndExpirienceClass.OVER25_LESS2  = возраст старше 25 лет, стаж вождения менее 2 лет

@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.Sex.MALE   = Male
-com.lapsa.insurance.elements.Sex.FEMALE = Female 

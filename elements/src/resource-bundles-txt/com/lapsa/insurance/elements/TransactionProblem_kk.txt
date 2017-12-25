@@ -1,5 +1,0 @@
-com.lapsa.insurance.elements.TransactionProblem.CANCELED_BY_CONSUMER = Клиентпен жойылды
-com.lapsa.insurance.elements.TransactionProblem.WRONG_DATA_PROVIDED  = Дұрыс емес деректер ұсынылған
-com.lapsa.insurance.elements.TransactionProblem.TEST                 = Тесттік өтінім
-com.lapsa.insurance.elements.TransactionProblem.DUPLICATE            = Басқа өтінімді қайталап тұр
-com.lapsa.insurance.elements.TransactionProblem.OTHER                = Басқа себеп

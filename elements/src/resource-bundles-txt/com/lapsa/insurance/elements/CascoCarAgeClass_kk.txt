@@ -1,3 +1,0 @@
-com.lapsa.insurance.elements.CascoCarAgeClass.FROM3TO7 = 3-тен 7 жылға дейін
-com.lapsa.insurance.elements.CascoCarAgeClass.UNDER3   = 3 жылға дейін
-com.lapsa.insurance.elements.CascoCarAgeClass.OTHER7   = 7 жылдан жоғары

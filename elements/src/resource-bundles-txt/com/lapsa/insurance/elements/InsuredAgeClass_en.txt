@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.InsuredAgeClass.OVER25        = age over 25 
-com.lapsa.insurance.elements.InsuredAgeClass.OVER25.short  = over 25 
-com.lapsa.insurance.elements.InsuredAgeClass.UNDER25       = age under 25 
-com.lapsa.insurance.elements.InsuredAgeClass.UNDER25.short = under 25 

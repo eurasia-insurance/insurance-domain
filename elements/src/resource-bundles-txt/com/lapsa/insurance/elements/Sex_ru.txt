@@ -1,2 +1,0 @@
-com.lapsa.insurance.elements.Sex.MALE   = мужской
-com.lapsa.insurance.elements.Sex.FEMALE = женский

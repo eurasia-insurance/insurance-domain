@@ -1,4 +1,0 @@
-com.lapsa.insurance.elements.ProgressStatus.NEW        = жаңа 
-com.lapsa.insurance.elements.ProgressStatus.ON_PROCESS = Өңдеуде
-com.lapsa.insurance.elements.ProgressStatus.ON_HOLD    = Үзілісте
-com.lapsa.insurance.elements.ProgressStatus.FINISHED   = Аяқталды
