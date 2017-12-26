@@ -18,7 +18,7 @@ import tech.lapsa.kz.taxpayer.TaxpayerNumber;
 @Entity
 @Table(name = "DRIVER")
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Driver extends BaseEntity {
+public abstract class Driver extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 

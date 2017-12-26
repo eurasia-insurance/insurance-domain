@@ -15,7 +15,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.lapsa.insurance.domain.BaseEntity;
+import com.lapsa.insurance.domain.EntitySuperclass;
 import com.lapsa.insurance.domain.InsuranceProduct;
 
 import tech.lapsa.java.commons.function.MyNumbers;
@@ -45,11 +45,11 @@ public class Policy extends InsuranceProduct {
 	MyOptionals.streamOf(getInsuredDrivers()) //
 		.orElseGet(Stream::empty) //
 		.filter(MyObjects::nonNull) //
-		.forEach(BaseEntity::unlazy);
+		.forEach(EntitySuperclass::unlazy);
 	MyOptionals.streamOf(getInsuredVehicles()) //
 		.orElseGet(Stream::empty) //
 		.filter(MyObjects::nonNull) //
-		.forEach(BaseEntity::unlazy);
+		.forEach(EntitySuperclass::unlazy);
     }
 
     public PolicyDriver addDriver(final PolicyDriver driver) {

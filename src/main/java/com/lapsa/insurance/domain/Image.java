@@ -17,7 +17,7 @@ import javax.persistence.Transient;
 
 @Entity
 @Table(name = "IMAGE")
-public class Image extends BaseEntity {
+public class Image extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 

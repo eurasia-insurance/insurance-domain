@@ -14,7 +14,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.lapsa.insurance.domain.BaseEntity;
+import com.lapsa.insurance.domain.EntitySuperclass;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.patterns.domain.HashCodePrime;
@@ -22,7 +22,7 @@ import tech.lapsa.patterns.domain.HashCodePrime;
 @Entity
 @Table(name = "USER_LOGIN")
 @HashCodePrime(163)
-public class UserLogin extends BaseEntity {
+public class UserLogin extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 

@@ -18,7 +18,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.lapsa.insurance.domain.BaseEntity;
+import com.lapsa.insurance.domain.EntitySuperclass;
 
 import tech.lapsa.java.commons.function.MyObjects;
 import tech.lapsa.java.commons.function.MyOptionals;
@@ -27,7 +27,7 @@ import tech.lapsa.patterns.domain.HashCodePrime;
 @Entity
 @Table(name = "USER")
 @HashCodePrime(59)
-public class User extends BaseEntity {
+public class User extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 
@@ -55,11 +55,11 @@ public class User extends BaseEntity {
 	MyOptionals.streamOf(getLogins()) //
 		.orElseGet(Stream::empty) //
 		.filter(MyObjects::nonNull) //
-		.forEach(BaseEntity::unlazy);
+		.forEach(EntitySuperclass::unlazy);
 	MyOptionals.streamOf(getGroups()) //
 		.orElseGet(Stream::empty) //
 		.filter(MyObjects::nonNull) //
-		.forEach(BaseEntity::unlazy);
+		.forEach(EntitySuperclass::unlazy);
 
     }
 
