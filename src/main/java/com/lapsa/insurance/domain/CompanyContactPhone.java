@@ -23,7 +23,7 @@ import tech.lapsa.patterns.domain.HashCodePrime;
 @Entity
 @Table(name = "POS_CONTACT_PHONE")
 @HashCodePrime(7)
-public class CompanyContactPhone extends BaseEntity {
+public class CompanyContactPhone extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 

@@ -12,7 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.lapsa.insurance.domain.BaseEntity;
+import com.lapsa.insurance.domain.EntitySuperclass;
 import com.lapsa.insurance.domain.InsuranceProduct;
 import com.lapsa.insurance.domain.InsuranceRequest;
 import com.lapsa.insurance.elements.InsuranceProductType;
@@ -44,7 +44,7 @@ public class CascoRequest extends InsuranceRequest {
     @Override
     public void unlazy() {
 	super.unlazy();
-	MyOptionals.of(getCasco()).ifPresent(BaseEntity::unlazy);
+	MyOptionals.of(getCasco()).ifPresent(EntitySuperclass::unlazy);
     }
 
     @Override

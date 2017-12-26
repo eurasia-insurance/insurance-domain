@@ -18,7 +18,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-import com.lapsa.insurance.domain.BaseEntity;
+import com.lapsa.insurance.domain.EntitySuperclass;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.patterns.domain.HashCodePrime;
@@ -26,7 +26,7 @@ import tech.lapsa.patterns.domain.HashCodePrime;
 @Entity
 @Table(name = "USER_GROUP")
 @HashCodePrime(197)
-public class UserGroup extends BaseEntity {
+public class UserGroup extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 

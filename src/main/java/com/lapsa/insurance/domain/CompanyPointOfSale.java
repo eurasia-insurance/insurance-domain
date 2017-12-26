@@ -39,7 +39,7 @@ import tech.lapsa.patterns.domain.HashCodePrime;
 	//
 })
 @HashCodePrime(11)
-public class CompanyPointOfSale extends BaseEntity {
+public class CompanyPointOfSale extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 

@@ -16,7 +16,7 @@ import tech.lapsa.patterns.domain.HashCodePrime;
 @Entity
 @Table(name = "POS_CONTACT_EMAIL")
 @HashCodePrime(5)
-public class CompanyContactEmail extends BaseEntity {
+public class CompanyContactEmail extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 

@@ -24,7 +24,7 @@ import tech.lapsa.java.commons.function.MyStrings;
 @Entity
 @Table(name = "VEHICLE")
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Vehicle extends BaseEntity {
+public abstract class Vehicle extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 

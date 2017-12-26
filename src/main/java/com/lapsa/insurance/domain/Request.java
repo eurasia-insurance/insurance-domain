@@ -37,7 +37,7 @@ import tech.lapsa.java.commons.function.MyOptionals;
 	@Index(name = "REQUEST_IDX03", columnList = "CLOSED") //
 })
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Request extends BaseEntity {
+public abstract class Request extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 

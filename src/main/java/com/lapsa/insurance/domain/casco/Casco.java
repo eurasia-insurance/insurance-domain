@@ -21,7 +21,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.lapsa.insurance.domain.BaseEntity;
+import com.lapsa.insurance.domain.EntitySuperclass;
 import com.lapsa.insurance.domain.Domain;
 import com.lapsa.insurance.domain.InsuranceProduct;
 import com.lapsa.insurance.elements.CascoDeductibleFullRate;
@@ -140,7 +140,7 @@ public class Casco extends InsuranceProduct {
 	MyOptionals.streamOf(getInsuredDrivers()) //
 		.orElseGet(Stream::empty) //
 		.filter(MyObjects::nonNull) //
-		.forEach(BaseEntity::unlazy);
+		.forEach(EntitySuperclass::unlazy);
     }
 
     public CascoDriver addDriver(final CascoDriver driver) {

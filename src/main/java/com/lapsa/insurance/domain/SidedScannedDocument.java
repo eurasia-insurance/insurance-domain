@@ -12,7 +12,7 @@ import tech.lapsa.java.commons.function.MyFunctions;
 import tech.lapsa.java.commons.function.MyObjects;
 
 @MappedSuperclass
-public abstract class SidedScannedDocument extends BaseEntity {
+public abstract class SidedScannedDocument extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 

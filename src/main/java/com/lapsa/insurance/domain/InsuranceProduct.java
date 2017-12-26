@@ -4,7 +4,7 @@ import javax.persistence.Embedded;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public abstract class InsuranceProduct extends BaseEntity {
+public abstract class InsuranceProduct extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 
