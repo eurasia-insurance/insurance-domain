@@ -37,11 +37,11 @@ public class PaymentData extends Domain {
 
     @Basic
     @Column(name = "PAYMENT_REFERENCE")
-    private String paymentReference;
+    private String reference;
 
     @Basic
     @Column(name = "PAYMENT_INSTANT")
-    private Instant paymentInstant;
+    private Instant instant;
 
     @Basic
     @Column(name = "PAYMENT_METHOD_NAME")
@@ -75,12 +75,12 @@ public class PaymentData extends Domain {
 		.map(PAYMENT_INVOICE_NUMBER.fieldAsCaptionMapper(variant, locale)) //
 		.ifPresent(sj::add);
 
-	MyOptionals.of(paymentInstant) //
+	MyOptionals.of(instant) //
 		.map(Localizeds.instantMapper(locale)) //
 		.map(PAYMENT_POST_INSTANT.fieldAsCaptionMapper(variant, locale)) //
 		.ifPresent(sj::add);
 
-	MyOptionals.of(paymentReference) //
+	MyOptionals.of(reference) //
 		.map(PAYMENT_POST_REFERENCE.fieldAsCaptionMapper(variant, locale)) //
 		.ifPresent(sj::add);
 
@@ -106,20 +106,20 @@ public class PaymentData extends Domain {
 	this.status = status;
     }
 
-    public String getPaymentReference() {
-	return paymentReference;
+    public String getReference() {
+	return reference;
     }
 
-    public void setPaymentReference(final String paymentReference) {
-	this.paymentReference = paymentReference;
+    public void setReference(final String reference) {
+	this.reference = reference;
     }
 
-    public void setPaymentInstant(final Instant paymentInstant) {
-	this.paymentInstant = paymentInstant;
+    public void setInstant(final Instant instant) {
+	this.instant = instant;
     }
 
-    public Instant getPaymentInstant() {
-	return paymentInstant;
+    public Instant getInstant() {
+	return instant;
     }
 
     public String getMethodName() {
