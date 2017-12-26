@@ -17,7 +17,7 @@
 
 		<class>com.lapsa.international.phone.converter.jpa.PhoneNumberAttributeConverter</class>
 
-		<class>com.lapsa.insurance.domain.BaseEntity</class>
+		<class>com.lapsa.insurance.domain.EntitySuperclass</class>
 		<class>com.lapsa.insurance.domain.RequesterData</class>
 		<class>com.lapsa.insurance.domain.Image</class>
 		<class>com.lapsa.insurance.domain.ObtainingData</class>
