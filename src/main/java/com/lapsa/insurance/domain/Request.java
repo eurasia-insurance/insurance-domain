@@ -101,19 +101,35 @@ public abstract class Request extends EntitySuperclass {
     })
     protected InetAddrData inetAddrData = new InetAddrData();
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = {
+	    CascadeType.DETACH,
+	    CascadeType.MERGE,
+	    CascadeType.PERSIST,
+	    CascadeType.REFRESH })
     @JoinColumn(name = "CREATED_BY_USER_ID")
     protected User createdBy;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = {
+	    CascadeType.DETACH,
+	    CascadeType.MERGE,
+	    CascadeType.PERSIST,
+	    CascadeType.REFRESH })
     @JoinColumn(name = "ACCEPTED_BY_USER_ID")
     protected User acceptedBy;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = {
+	    CascadeType.DETACH,
+	    CascadeType.MERGE,
+	    CascadeType.PERSIST,
+	    CascadeType.REFRESH })
     @JoinColumn(name = "COMPLETED_BY_USER_ID")
     protected User completedBy;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = {
+	    CascadeType.DETACH,
+	    CascadeType.MERGE,
+	    CascadeType.PERSIST,
+	    CascadeType.REFRESH })
     @JoinColumn(name = "CLOSED_BY_USER_ID")
     protected User closedBy;
 
