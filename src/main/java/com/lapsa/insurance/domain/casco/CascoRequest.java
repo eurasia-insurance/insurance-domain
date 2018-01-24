@@ -16,7 +16,6 @@ import com.lapsa.insurance.domain.EntitySuperclass;
 import com.lapsa.insurance.domain.InsuranceProduct;
 import com.lapsa.insurance.domain.InsuranceRequest;
 import com.lapsa.insurance.elements.InsuranceProductType;
-import com.lapsa.insurance.elements.RequestSource;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localized;
@@ -31,10 +30,6 @@ public class CascoRequest extends InsuranceRequest {
     private static final long serialVersionUID = 1L;
 
     public CascoRequest() {
-    }
-
-    public CascoRequest(final RequestSource source) {
-	super(source);
     }
 
     @OneToOne(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL, optional = false)
