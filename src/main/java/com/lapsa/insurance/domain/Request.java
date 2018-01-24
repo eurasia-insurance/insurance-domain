@@ -25,7 +25,6 @@ import com.lapsa.insurance.domain.crm.InetAddrData;
 import com.lapsa.insurance.domain.crm.UTMData;
 import com.lapsa.insurance.domain.crm.User;
 import com.lapsa.insurance.elements.ProgressStatus;
-import com.lapsa.insurance.elements.RequestSource;
 import com.lapsa.insurance.elements.RequestStatus;
 
 import tech.lapsa.java.commons.function.MyOptionals;
@@ -68,15 +67,6 @@ public abstract class Request extends EntitySuperclass {
 
     public Request() {
     }
-
-    public Request(final RequestSource source) {
-	this.source = source;
-    }
-
-    @Basic
-    @Enumerated(EnumType.STRING)
-    @Column(name = "SOURCE")
-    protected RequestSource source;
 
     @Basic
     @Enumerated(EnumType.STRING)
@@ -258,14 +248,6 @@ public abstract class Request extends EntitySuperclass {
 
     public void setNote(final String note) {
 	this.note = note;
-    }
-
-    public RequestSource getSource() {
-	return source;
-    }
-
-    public void setSource(final RequestSource source) {
-	this.source = source;
     }
 
     public InetAddrData getInetAddrData() {

@@ -10,7 +10,6 @@ import javax.persistence.Table;
 
 import com.lapsa.insurance.elements.InsuranceProductType;
 import com.lapsa.insurance.elements.InsuranceRequestType;
-import com.lapsa.insurance.elements.RequestSource;
 import com.lapsa.insurance.elements.TransactionProblem;
 import com.lapsa.insurance.elements.TransactionStatus;
 
@@ -21,10 +20,6 @@ public abstract class InsuranceRequest extends Request {
     private static final long serialVersionUID = 1L;
 
     public InsuranceRequest() {
-    }
-
-    public InsuranceRequest(final RequestSource source) {
-	super(source);
     }
 
     @Basic
