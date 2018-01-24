@@ -10,6 +10,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.lapsa.insurance.elements.InsuranceProductType;
+
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localized;
 import tech.lapsa.java.commons.localization.Localizeds;
@@ -18,7 +20,7 @@ import tech.lapsa.patterns.domain.HashCodePrime;
 @Entity
 @Table(name = "CALLBACK_REQUEST")
 @HashCodePrime(173)
-public class CallbackRequest extends Request {
+public class CallbackRequest extends InsuranceRequest {
 
     private static final long serialVersionUID = 1L;
 
@@ -63,5 +65,15 @@ public class CallbackRequest extends Request {
 	return sb.append(sj.toString()) //
 		.append(appendEntityId())
 		.toString();
+    }
+
+    @Override
+    public InsuranceProduct getProduct() {
+	return null;
+    }
+
+    @Override
+    public InsuranceProductType getProductType() {
+	return InsuranceProductType.UNKNOWN;
     }
 }
