@@ -1,0 +1,20 @@
+package test.persistenceUnit2;
+
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import tech.lapsa.insurance.jpa.InsuranceConstants;
+
+@Startup
+@Singleton
+public class TestBean {
+
+    @PersistenceContext(unitName = InsuranceConstants.PERSISTENCE_UNIT_NAME)
+    protected EntityManager em;
+
+    public EntityManager getEm() {
+	return em;
+    }
+}
