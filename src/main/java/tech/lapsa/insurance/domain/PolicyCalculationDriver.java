@@ -1,7 +1,6 @@
 package tech.lapsa.insurance.domain;
 
 import java.time.LocalDate;
-import java.util.Locale;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -19,7 +18,7 @@ import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Entity
 @Table(name = "POLICY_CALCULATION_DRIVER")
-@HashCodePrime(7)
+@HashCodePrime(17)
 public class PolicyCalculationDriver extends IntIdEntitySuperclass {
 
     private static final long serialVersionUID = 1L;
@@ -117,13 +116,4 @@ public class PolicyCalculationDriver extends IntIdEntitySuperclass {
     public LocalDate getDayOfBirth() {
 	return dayOfBirth;
     }
-
-    // other
-
-    @Override
-    public String localized(LocalizationVariant variant, Locale locale) {
-	// TODO Auto-generated method stub
-	return null;
-    }
-
 }

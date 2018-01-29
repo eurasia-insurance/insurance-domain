@@ -4,8 +4,8 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
 
-	<persistence-unit name="insurance2PU"
-		transaction-type="JTA">
+	<persistence-unit name="insurancePU" transaction-type="JTA">
+
 		<jta-data-source>insurance/jdbc/DataSource_MYSQL</jta-data-source>
 
 		<class>tech.lapsa.javax.jpa.converters.CurrencyAttributeConverter</class>
@@ -19,9 +19,16 @@
 
 		<class>com.lapsa.international.phone.converter.jpa.PhoneNumberAttributeConverter</class>
 
-		<class>tech.lapsa.insurance.domain.IntIdEntitySuperclass</class>
+		<class>tech.lapsa.insurance.domain.Amount</class>
 		<class>tech.lapsa.insurance.domain.Calculation</class>
+		<class>tech.lapsa.insurance.domain.Contract</class>
+		<class>tech.lapsa.insurance.domain.CreationParameteredIntIdEntitySuperclass</class>
+		<class>tech.lapsa.insurance.domain.IntIdEntitySuperclass</class>
 		<class>tech.lapsa.insurance.domain.Lead</class>
+		<class>tech.lapsa.insurance.domain.LeadAttachement</class>
+		<class>tech.lapsa.insurance.domain.ManualCalculation</class>
+		<class>tech.lapsa.insurance.domain.Payment</class>
+		<class>tech.lapsa.insurance.domain.PaymentOrder</class>
 		<class>tech.lapsa.insurance.domain.PolicyCalculation</class>
 		<class>tech.lapsa.insurance.domain.PolicyCalculationDriver</class>
 		<class>tech.lapsa.insurance.domain.PolicyCalculationVehicle</class>
@@ -33,10 +40,14 @@
 		<validation-mode>NONE</validation-mode>
 
 		<properties>
-			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
-			<property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create" />
-			<property name="javax.persistence.schema-generation.scripts.create-target" value="./src/sql/mysql/insurance-schema-create-4.0.ddl"/>
-			<property name="javax.persistence.schema-generation.scripts.drop-target" value="./src/sql/mysql/insurance-schema-drop-4.0.ddl"/>
+			<property name="javax.persistence.schema-generation.database.action"
+				value="drop-and-create" />
+			<property name="javax.persistence.schema-generation.scripts.action"
+				value="drop-and-create" />
+			<property name="javax.persistence.schema-generation.scripts.create-target"
+				value="./src/sql/mysql/insurance-schema-create-4.0.ddl" />
+			<property name="javax.persistence.schema-generation.scripts.drop-target"
+				value="./src/sql/mysql/insurance-schema-drop-4.0.ddl" />
 			<property name="eclipselink.logging.parameters" value="true" />
 			<property name="eclipselink.weaving" value="static" />
 		</properties>

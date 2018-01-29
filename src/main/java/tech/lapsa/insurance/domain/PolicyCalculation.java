@@ -47,5 +47,4 @@ public class PolicyCalculation extends Calculation {
 	return MyStreams.orEmptyOf(vehicles)
 		.collect(MyCollectors.unmodifiableList());
     }
-
 }

@@ -1,7 +1,5 @@
 package tech.lapsa.insurance.domain;
 
-import java.util.Locale;
-
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -95,13 +93,5 @@ public class PolicyCalculationVehicle extends IntIdEntitySuperclass {
 
     public Boolean isMajorCity() {
 	return majorCity;
-    }
-
-    // other
-
-    @Override
-    public String localized(LocalizationVariant variant, Locale locale) {
-	// TODO Auto-generated method stub
-	return null;
     }
 }

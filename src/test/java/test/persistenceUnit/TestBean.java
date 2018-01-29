@@ -5,7 +5,7 @@ import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.lapsa.insurance.jpa.InsuranceConstants;
+import tech.lapsa.insurance.jpa.InsuranceConstants;
 
 @Startup
 @Singleton

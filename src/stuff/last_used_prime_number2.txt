@@ -1,12 +1,12 @@
        3 tech.lapsa.insurance.domain.Lead
-       5 tech.lapsa.insurance.domain.Calculation
+       5 
        7 tech.lapsa.insurance.domain.PolicyCalculation
       11 tech.lapsa.insurance.domain.PolicyCalculationDriver
       13 tech.lapsa.insurance.domain.PolicyCalculationVehicle
-      17 
-      19 
-      23 
-      29 
+      17 tech.lapsa.insurance.domain.ManualCalculation
+      19 tech.lapsa.insurance.domain.PaymentOrder
+      23 tech.lapsa.insurance.domain.Payment
+      29 tech.lapsa.insurance.domain.Contract
       31 
       37 
       41 

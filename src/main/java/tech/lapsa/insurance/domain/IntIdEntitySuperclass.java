@@ -5,7 +5,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
-import tech.lapsa.java.commons.function.MyNumbers;
 import tech.lapsa.java.commons.function.MyOptionals;
 
 @MappedSuperclass
@@ -16,10 +15,6 @@ public abstract class IntIdEntitySuperclass extends Domain {
     // constructor
 
     protected IntIdEntitySuperclass() {
-    }
-
-    protected IntIdEntitySuperclass(final Integer id) throws IllegalArgumentException {
-	this.id = MyNumbers.requireNonZero(id, "id");
     }
 
     // id
