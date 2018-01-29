@@ -9,12 +9,14 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import tech.lapsa.java.commons.function.MyCollectors;
 import tech.lapsa.java.commons.function.MyStreams;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Entity
+@Table(name = "POLICY_CALCULATION")
 @DiscriminatorValue("POLICY_CALCULATION")
 @HashCodePrime(7)
 public class PolicyCalculation extends Calculation {
