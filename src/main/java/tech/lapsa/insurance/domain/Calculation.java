@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "CALCULATION")
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "DTYPE")
+@DiscriminatorColumn(name = "DISCR_TYPE")
 public abstract class Calculation extends LeadAttachement {
 
     private static final long serialVersionUID = 1L;

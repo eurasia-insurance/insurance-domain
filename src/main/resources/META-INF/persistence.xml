@@ -13,6 +13,7 @@
 		<class>tech.lapsa.javax.jpa.converters.LocalDateAttributeConverter</class>
 		<class>tech.lapsa.javax.jpa.converters.LocalDateTimeAttributeConverter</class>
 		<class>tech.lapsa.javax.jpa.converters.LocalTimeAttributeConverter</class>
+		<class>tech.lapsa.javax.jpa.converters.LocaleAttributeConverter</class>
 
 		<class>tech.lapsa.kz.taxpayer.converter.jpa.TaxpayerNumberAttributeConverter</class>
 		<class>tech.lapsa.kz.vehicle.converter.jpa.VehicleRegNumberAttributeConverter</class>
@@ -26,12 +27,14 @@
 		<class>tech.lapsa.insurance.domain.IntIdEntitySuperclass</class>
 		<class>tech.lapsa.insurance.domain.Lead</class>
 		<class>tech.lapsa.insurance.domain.LeadAttachement</class>
-		<class>tech.lapsa.insurance.domain.ManualCalculation</class>
 		<class>tech.lapsa.insurance.domain.Payment</class>
 		<class>tech.lapsa.insurance.domain.PaymentOrder</class>
+		<class>tech.lapsa.insurance.domain.PersonalInformation</class>
 		<class>tech.lapsa.insurance.domain.PolicyCalculation</class>
 		<class>tech.lapsa.insurance.domain.PolicyCalculationDriver</class>
 		<class>tech.lapsa.insurance.domain.PolicyCalculationVehicle</class>
+		<class>tech.lapsa.insurance.domain.CascoCalculation</class>
+		<class>tech.lapsa.insurance.domain.CascoCalculationVehicle</class>
 
 		<class>tech.lapsa.insurance.jpa.InsuranceVersion</class>
 

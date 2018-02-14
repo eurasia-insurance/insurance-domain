@@ -7,8 +7,8 @@
       19 tech.lapsa.insurance.domain.PaymentOrder
       23 tech.lapsa.insurance.domain.Payment
       29 tech.lapsa.insurance.domain.Contract
-      31 
-      37 
+      31 tech.lapsa.insurance.domain.CascoCalculation
+      37 tech.lapsa.insurance.domain.CascoCalculationVehicle
       41 
       43 
       47 

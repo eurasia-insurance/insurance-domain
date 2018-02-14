@@ -6,6 +6,7 @@ import static javax.persistence.FetchType.*;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
 import javax.persistence.Basic;
@@ -26,7 +27,7 @@ import tech.lapsa.patterns.domain.HashCodePrime;
 @Entity
 @Table(name = "LEAD")
 @HashCodePrime(3)
-public class Lead extends PaymentOrder {
+public class Lead extends IntIdEntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 
@@ -113,6 +114,16 @@ public class Lead extends PaymentOrder {
 	return MyOptionals.of(requesterEmail);
     }
 
+    // requesterLocale
+
+    @Basic
+    @Column(name = "REQUESTER_LOCALE")
+    protected Locale requesterLocale;
+
+    public Locale getRequesterLocale() {
+	return requesterLocale;
+    }
+
     // calculations
 
     @OneToMany(fetch = EAGER, cascade = ALL, orphanRemoval = true, mappedBy = "lead")
@@ -120,13 +131,13 @@ public class Lead extends PaymentOrder {
 
     public List<Calculation> getCalculations() {
 	return MyStreams.orEmptyOf(calculations)
-		.sorted(CREATION_REVERSE_ORDER_COMPARATOR)
+		.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
 		.collect(MyCollectors.unmodifiableList());
     }
 
     public Optional<Calculation> optFirstCalculation() {
 	return MyStreams.orEmptyOf(calculations)
-		.sorted(CREATION_REVERSE_ORDER_COMPARATOR)
+		.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
 		.findFirst();
     }
 
@@ -141,13 +152,13 @@ public class Lead extends PaymentOrder {
 
     public List<PaymentOrder> getPaymentOrders() {
 	return MyStreams.orEmptyOf(paymentOrders)
-		.sorted(CREATION_REVERSE_ORDER_COMPARATOR)
+		.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
 		.collect(MyCollectors.unmodifiableList());
     }
 
     public Optional<PaymentOrder> optFirstPaymentOrder() {
 	return MyStreams.orEmptyOf(paymentOrders)
-		.sorted(CREATION_REVERSE_ORDER_COMPARATOR)
+		.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
 		.findFirst();
     }
 
@@ -168,13 +179,13 @@ public class Lead extends PaymentOrder {
 
     public List<Payment> getPayments() {
 	return MyStreams.orEmptyOf(payments)
-		.sorted(CREATION_REVERSE_ORDER_COMPARATOR)
+		.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
 		.collect(MyCollectors.unmodifiableList());
     }
 
     public Optional<Payment> optFirstPayment() {
 	return MyStreams.orEmptyOf(payments)
-		.sorted(CREATION_REVERSE_ORDER_COMPARATOR)
+		.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
 		.findFirst();
     }
 
@@ -195,13 +206,13 @@ public class Lead extends PaymentOrder {
 
     public List<Contract> getContracts() {
 	return MyStreams.orEmptyOf(contracts)
-		.sorted(CREATION_REVERSE_ORDER_COMPARATOR)
+		.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
 		.collect(MyCollectors.unmodifiableList());
     }
 
     public Optional<Contract> optFirstContract() {
 	return MyStreams.orEmptyOf(contracts)
-		.sorted(CREATION_REVERSE_ORDER_COMPARATOR)
+		.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
 		.findFirst();
     }
 

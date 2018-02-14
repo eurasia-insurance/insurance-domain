@@ -1,9 +1,8 @@
 package tech.lapsa.insurance.domain;
 
-import java.time.LocalDate;
-
 import javax.persistence.Basic;
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -13,7 +12,6 @@ import com.lapsa.insurance.elements.InsuranceClassType;
 import com.lapsa.insurance.elements.InsuredAgeClass;
 import com.lapsa.insurance.elements.InsuredExpirienceClass;
 
-import tech.lapsa.kz.taxpayer.TaxpayerNumber;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Entity
@@ -28,14 +26,13 @@ public class PolicyCalculationDriver extends IntIdEntitySuperclass {
     protected PolicyCalculationDriver() {
     }
 
-    // idNumber
+    // personal
 
-    @Basic
-    @Column(name = "ID_NUMBER")
-    protected TaxpayerNumber idNumber;
+    @Embedded
+    protected PersonalInformation personal;
 
-    public TaxpayerNumber getIdNumber() {
-	return idNumber;
+    public PersonalInformation getPersonal() {
+	return personal;
     }
 
     // insuranceClassType
@@ -79,41 +76,5 @@ public class PolicyCalculationDriver extends IntIdEntitySuperclass {
 
     public Boolean isHasAnyPrivilege() {
 	return hasAnyPrivilege;
-    }
-
-    // name
-
-    @Basic
-    @Column(name = "NAME")
-    private String name;
-
-    public String getName() {
-	return name;
-    }
-
-    // surename
-
-    @Basic
-    @Column(name = "SURENAME")
-    private String surename;
-
-    public String getSurename() {
-	return surename;
-    }
-
-    // patronymic
-
-    private String patronymic;
-
-    public String getPatronymic() {
-	return patronymic;
-    }
-
-    // dayOfBirth
-
-    private LocalDate dayOfBirth;
-
-    public LocalDate getDayOfBirth() {
-	return dayOfBirth;
     }
 }
