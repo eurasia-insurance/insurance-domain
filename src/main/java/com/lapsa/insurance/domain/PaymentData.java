@@ -48,6 +48,10 @@ public class PaymentData extends Domain {
     private String methodName;
 
     @Basic
+    @Column(name = "PAYMENT_CARD")
+    private String card;
+
+    @Basic
     @Column(name = "PAYMENT_AMOUNT")
     private Double amount;
 
@@ -128,6 +132,14 @@ public class PaymentData extends Domain {
 
     public void setMethodName(final String methodName) {
 	this.methodName = methodName;
+    }
+
+    public String getCard() {
+        return card;
+    }
+
+    public void setCard(String card) {
+        this.card = card;
     }
 
     public Double getAmount() {
