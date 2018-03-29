@@ -36,6 +36,7 @@ com.lapsa.insurance.domain.DisplayNameElements.REQUESTER_DATA = Инициато
 
 com.lapsa.insurance.domain.DisplayNameElements.OBTAINING_DATA = Способ получения
 
+com.lapsa.insurance.domain.DisplayNameElements.PAYMENT_PAYER_NAME = Плательщик
 com.lapsa.insurance.domain.DisplayNameElements.PAYMENT_DATA = Способ оплаты
 com.lapsa.insurance.domain.DisplayNameElements.PAYMENT_INVOICE_NUMBER = идентификатор платежного документа
 com.lapsa.insurance.domain.DisplayNameElements.PAYMENT_INVOICE_NUMBER.short = платежный документ
