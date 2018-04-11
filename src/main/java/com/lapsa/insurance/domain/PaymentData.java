@@ -48,6 +48,14 @@ public class PaymentData extends Domain {
     private String methodName;
 
     @Basic
+    @Column(name = "PAYER_NAME")
+    private String payerName;
+
+    @Basic
+    @Column(name = "PAYMENT_CARD")
+    private String card;
+
+    @Basic
     @Column(name = "PAYMENT_AMOUNT")
     private Double amount;
 
@@ -84,6 +92,10 @@ public class PaymentData extends Domain {
 		.map(PAYMENT_POST_REFERENCE.fieldAsCaptionMapper(variant, locale)) //
 		.ifPresent(sj::add);
 
+	MyOptionals.of(payerName) //
+		.map(PAYMENT_PAYER_NAME.fieldAsCaptionMapper(variant, locale)) //
+		.ifPresent(sj::add);
+
 	return sb.append(sj.toString()) //
 		.toString();
     }
@@ -96,6 +108,14 @@ public class PaymentData extends Domain {
 
     public void setInvoiceNumber(final String invoiceNumber) {
 	this.invoiceNumber = invoiceNumber;
+    }
+
+    public String getPayerName() {
+	return payerName;
+    }
+
+    public void setPayerName(String payerName) {
+	this.payerName = payerName;
     }
 
     public PaymentStatus getStatus() {
@@ -128,6 +148,14 @@ public class PaymentData extends Domain {
 
     public void setMethodName(final String methodName) {
 	this.methodName = methodName;
+    }
+
+    public String getCard() {
+	return card;
+    }
+
+    public void setCard(String card) {
+	this.card = card;
     }
 
     public Double getAmount() {
