@@ -1,11 +1,17 @@
 package com.lapsa.insurance.domain;
 
+import java.sql.Timestamp;
+import java.time.Instant;
+
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.Version;
 
 import tech.lapsa.java.commons.function.MyNumbers;
+import tech.lapsa.java.commons.function.MyObjects;
 import tech.lapsa.java.commons.function.MyOptionals;
 
 @MappedSuperclass
@@ -28,6 +34,16 @@ public abstract class EntitySuperclass extends Domain {
 
     public Integer getId() {
 	return id;
+    }
+
+    // autoUpdated
+
+    @Version
+    @Column(name = "OPTLOCK")
+    private Timestamp version;
+
+    public Instant getUpdatedVersion() {
+	return MyObjects.nullOrGet(version, Timestamp::toInstant);
     }
 
     protected String appendEntityId() {
