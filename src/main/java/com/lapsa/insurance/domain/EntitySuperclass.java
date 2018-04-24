@@ -36,14 +36,14 @@ public abstract class EntitySuperclass extends Domain {
 	return id;
     }
 
-    // autoUpdated
+    // updated
 
     @Version
-    @Column(name = "OPTLOCK")
-    private Timestamp version;
+    @Column(name = "UPDATED")
+    private Timestamp updated;
 
-    public Instant getUpdatedVersion() {
-	return MyObjects.nullOrGet(version, Timestamp::toInstant);
+    public Instant getUpdated() {
+	return MyObjects.nullOrGet(updated, Timestamp::toInstant);
     }
 
     protected String appendEntityId() {
