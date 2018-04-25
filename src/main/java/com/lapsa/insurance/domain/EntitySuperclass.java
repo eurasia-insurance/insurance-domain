@@ -39,7 +39,7 @@ public abstract class EntitySuperclass extends Domain {
     // updated
 
     @Version
-    @Column(name = "UPDATED")
+    @Column(name = "UPDATED", nullable = false)
     private Timestamp updated;
 
     public Instant getUpdated() {
