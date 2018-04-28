@@ -22,7 +22,7 @@
 		<!-- tech -->
 		<javax-jpa-commons.version>1.2-SNAPSHOT</javax-jpa-commons.version>
 		<patterns-domain.version>1.1-SNAPSHOT</patterns-domain.version>
-		<lapsa-arquillian-test.version>1.2-SNAPSHOT</lapsa-arquillian-test.version>
+		<lapsa-arquillian-test.version>1.2</lapsa-arquillian-test.version>
 		<!-- oldies -->
 		<insurance-lib.version>2.5-SNAPSHOT</insurance-lib.version>
 		<kz-lib.version>3.3-SNAPSHOT</kz-lib.version>
