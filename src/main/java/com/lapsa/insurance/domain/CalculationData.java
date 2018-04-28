@@ -28,12 +28,6 @@ public class CalculationData extends Domain {
     @Column(name = "CALCULATED_AMOUNT")
     private Double amount;
 
-    // TODO REFACT : To be removed in the next release
-    @Deprecated
-    @Basic
-    @Column(name = "PAID_AMOUNT_TO_BE_REMOVED_IN_THE_NEXT_RELEASE")
-    private Double paidAmount;
-
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "CALCULATED_CURRENCY")
@@ -74,15 +68,5 @@ public class CalculationData extends Domain {
 
     public void setCurrency(Currency currency) {
 	this.currency = currency;
-    }
-
-    @Deprecated
-    public Double getPaidAmount() {
-	return paidAmount;
-    }
-
-    @Deprecated
-    public void setPaidAmount(Double paidAmount) {
-	this.paidAmount = paidAmount;
     }
 }
