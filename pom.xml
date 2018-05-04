@@ -340,7 +340,7 @@
 	<scm>
 		<connection>scm:git:https://gitlab.lapsa.tech/lapsa/insurance/domain.git</connection>
 		<developerConnection>scm:git:https://gitlab.lapsa.tech/lapsa/insurance/domain.git</developerConnection>
-		<tag>v2.4.4</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
