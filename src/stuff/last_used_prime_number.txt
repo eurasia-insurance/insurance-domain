@@ -39,8 +39,8 @@
      173 com.lapsa.insurance.domain.CallbackRequest
      179 com.lapsa.insurance.domain.InsurancePeriodData
      181 com.lapsa.insurance.domain.crm.InetAddrData
-     191 
-     193 
+     191 com.lapsa.insurance.domain.InsurantData
+     193 com.lapsa.insurance.domain.CompanyData
      197 com.lapsa.insurance.domain.crm.UserGroup
      199 
      211 
