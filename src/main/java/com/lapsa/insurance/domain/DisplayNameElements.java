@@ -53,6 +53,8 @@ public enum DisplayNameElements implements LocalizedElement {
     PERSONAL_DATA_DOB,
     PERSONAL_DATA_SEX,
     //
+    COMPANY_DATA,
+    //
     POLICY_VEHICLE,
     POLICY_VEHICLE_CLASS,
     POLICY_VEHICLE_AGE_CLASS,

@@ -47,6 +47,8 @@ com.lapsa.insurance.domain.DisplayNameElements.PERSONAL_DATA = Личные да
 com.lapsa.insurance.domain.DisplayNameElements.PERSONAL_DATA_DOB = дата рождения
 com.lapsa.insurance.domain.DisplayNameElements.PERSONAL_DATA_SEX = пол
 
+com.lapsa.insurance.domain.DisplayNameElements.COMPANY_DATA = Данные о компании
+
 com.lapsa.insurance.domain.DisplayNameElements.POLICY_VEHICLE = Затрахованное ТС
 com.lapsa.insurance.domain.DisplayNameElements.POLICY_VEHICLE.short = ТС
 com.lapsa.insurance.domain.DisplayNameElements.POLICY_VEHICLE_AGE_CLASS = возраст

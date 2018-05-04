@@ -53,6 +53,8 @@ com.lapsa.insurance.domain.DisplayNameElements.POLICY_VEHICLE_AGE_CLASS = =KAZ= 
 com.lapsa.insurance.domain.DisplayNameElements.POLICY_VEHICLE_CLASS = =KAZ= класс
 com.lapsa.insurance.domain.DisplayNameElements.POLICY_VEHICLE_REG_NUMBER = =KAZ= рег.номер
 
+com.lapsa.insurance.domain.DisplayNameElements.COMPANY_DATA = =KAZ= Данные о компании
+
 com.lapsa.insurance.domain.DisplayNameElements.POLICY_DRIVER = =KAZ= Застрахованный водитель
 
 com.lapsa.insurance.domain.DisplayNameElements.CASCO_VEHICLE = =KAZ= Застрахованное ТС
