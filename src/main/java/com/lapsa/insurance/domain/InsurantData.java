@@ -91,7 +91,7 @@ public class InsurantData extends Domain {
     // phone
 
     @Basic
-    @Column(name = "REQUESTER_PHONE_NUMBER")
+    @Column(name = "INSURANT_PHONE_NUMBER")
     private PhoneNumber phone;
 
     public PhoneNumber getPhone() {
