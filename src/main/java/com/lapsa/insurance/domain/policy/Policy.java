@@ -2,21 +2,28 @@ package com.lapsa.insurance.domain.policy;
 
 import static com.lapsa.insurance.domain.DisplayNameElements.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.StringJoiner;
 import java.util.stream.Stream;
 
+import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import com.lapsa.insurance.domain.EntitySuperclass;
 import com.lapsa.insurance.domain.InsuranceProduct;
+import com.lapsa.insurance.domain.InsurantData;
 
 import tech.lapsa.java.commons.function.MyNumbers;
 import tech.lapsa.java.commons.function.MyObjects;
@@ -89,6 +96,61 @@ public class Policy extends InsuranceProduct {
 	return vehicle;
     }
 
+    // number
+
+    @Basic
+    @Column(name = "POLICY_NUMBER")
+    private String number;
+
+    public String getNumber() {
+	return number;
+    }
+
+    public void setNumber(String number) {
+	this.number = number;
+    }
+
+    // dateOfIssue
+
+    @Basic
+    @Temporal(TemporalType.DATE)
+    @Column(name = "DATE_OF_ISSUE")
+    private LocalDate dateOfIssue;
+
+    public LocalDate getDateOfIssue() {
+	return dateOfIssue;
+    }
+
+    public void setDateOfIssue(LocalDate dateOfIssue) {
+	this.dateOfIssue = dateOfIssue;
+    }
+
+    @Embedded
+    private InsurantData insurant;
+
+    public InsurantData getInsurant() {
+	return insurant;
+    }
+
+    public void setInsurant(InsurantData insurant) {
+	this.insurant = insurant;
+    }
+
+    // dateOfTermination
+
+    @Basic
+    @Temporal(TemporalType.DATE)
+    @Column(name = "DATE_OF_TERMINATION")
+    private LocalDate dateOfTermination;
+
+    public LocalDate getDateOfTermination() {
+	return dateOfTermination;
+    }
+
+    public void setDateOfTermination(LocalDate dateOfTermination) {
+	this.dateOfTermination = dateOfTermination;
+    }
+
     // controls
 
     @Override
@@ -136,5 +198,4 @@ public class Policy extends InsuranceProduct {
 		.append(appendEntityId()) //
 		.toString();
     }
-
 }
