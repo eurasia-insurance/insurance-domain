@@ -31,25 +31,18 @@ public class Policy extends InsuranceProduct {
 
     private static final long serialVersionUID = 1L;
 
+    // insuredDrivers
+
     @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(name = "POLICY_ID")
     private List<PolicyDriver> insuredDrivers = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
-    @JoinColumn(name = "POLICY_ID")
-    private List<PolicyVehicle> insuredVehicles = new ArrayList<>();
+    public List<PolicyDriver> getInsuredDrivers() {
+	return insuredDrivers;
+    }
 
-    @Override
-    public void unlazy() {
-	super.unlazy();
-	MyOptionals.streamOf(getInsuredDrivers()) //
-		.orElseGet(Stream::empty) //
-		.filter(MyObjects::nonNull) //
-		.forEach(EntitySuperclass::unlazy);
-	MyOptionals.streamOf(getInsuredVehicles()) //
-		.orElseGet(Stream::empty) //
-		.filter(MyObjects::nonNull) //
-		.forEach(EntitySuperclass::unlazy);
+    protected void setInsuredDrivers(final List<PolicyDriver> insuredDrivers) {
+	this.insuredDrivers = insuredDrivers;
     }
 
     public PolicyDriver addDriver(final PolicyDriver driver) {
@@ -67,6 +60,20 @@ public class Policy extends InsuranceProduct {
 	return driver;
     }
 
+    // insuredVehicles
+
+    @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
+    @JoinColumn(name = "POLICY_ID")
+    private List<PolicyVehicle> insuredVehicles = new ArrayList<>();
+
+    public List<PolicyVehicle> getInsuredVehicles() {
+	return insuredVehicles;
+    }
+
+    protected void setInsuredVehicles(final List<PolicyVehicle> insuredVehicles) {
+	this.insuredVehicles = insuredVehicles;
+    }
+
     public PolicyVehicle addVehicle(final PolicyVehicle vehicle) {
 	MyObjects.requireNonNull(vehicle, "Value must not be null");
 	if (insuredVehicles == null)
@@ -80,6 +87,21 @@ public class Policy extends InsuranceProduct {
 	if (insuredVehicles != null)
 	    insuredVehicles.remove(vehicle);
 	return vehicle;
+    }
+
+    // controls
+
+    @Override
+    public void unlazy() {
+	super.unlazy();
+	MyOptionals.streamOf(getInsuredDrivers()) //
+		.orElseGet(Stream::empty) //
+		.filter(MyObjects::nonNull) //
+		.forEach(EntitySuperclass::unlazy);
+	MyOptionals.streamOf(getInsuredVehicles()) //
+		.orElseGet(Stream::empty) //
+		.filter(MyObjects::nonNull) //
+		.forEach(EntitySuperclass::unlazy);
     }
 
     @Override
@@ -115,21 +137,4 @@ public class Policy extends InsuranceProduct {
 		.toString();
     }
 
-    // GENERATED
-
-    public List<PolicyDriver> getInsuredDrivers() {
-	return insuredDrivers;
-    }
-
-    protected void setInsuredDrivers(final List<PolicyDriver> insuredDrivers) {
-	this.insuredDrivers = insuredDrivers;
-    }
-
-    public List<PolicyVehicle> getInsuredVehicles() {
-	return insuredVehicles;
-    }
-
-    protected void setInsuredVehicles(final List<PolicyVehicle> insuredVehicles) {
-	this.insuredVehicles = insuredVehicles;
-    }
 }
