@@ -51,6 +51,8 @@ com.lapsa.insurance.domain.DisplayNameElements.POLICY_VEHICLE_AGE_CLASS = age
 com.lapsa.insurance.domain.DisplayNameElements.POLICY_VEHICLE_CLASS = class
 com.lapsa.insurance.domain.DisplayNameElements.POLICY_VEHICLE_REG_NUMBER = =ENG= рег.номер
 
+com.lapsa.insurance.domain.DisplayNameElements.COMPANY_DATA = Company data
+
 com.lapsa.insurance.domain.DisplayNameElements.POLICY_DRIVER = Insured driver
 
 com.lapsa.insurance.domain.DisplayNameElements.CASCO_VEHICLE = Insured vehicle
