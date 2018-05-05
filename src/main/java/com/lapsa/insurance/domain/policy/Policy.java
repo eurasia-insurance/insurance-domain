@@ -14,6 +14,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -23,6 +25,7 @@ import javax.persistence.TemporalType;
 
 import com.lapsa.insurance.domain.EntitySuperclass;
 import com.lapsa.insurance.domain.InsuranceProduct;
+import com.lapsa.insurance.domain.InsuranceProductTerminationReason;
 import com.lapsa.insurance.domain.InsurantData;
 
 import tech.lapsa.java.commons.function.MyNumbers;
@@ -149,6 +152,21 @@ public class Policy extends InsuranceProduct {
 
     public void setDateOfTermination(LocalDate dateOfTermination) {
 	this.dateOfTermination = dateOfTermination;
+    }
+
+    // terminationReason
+
+    @Basic
+    @Enumerated(EnumType.STRING)
+    @Column(name = "TERMINATION_REASON")
+    private InsuranceProductTerminationReason terminationReason;
+
+    public InsuranceProductTerminationReason getTerminationReason() {
+	return terminationReason;
+    }
+
+    public void setTerminationReason(InsuranceProductTerminationReason terminationReason) {
+	this.terminationReason = terminationReason;
     }
 
     // controls
