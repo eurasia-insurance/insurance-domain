@@ -19,7 +19,6 @@
 
 		<class>com.lapsa.insurance.domain.EntitySuperclass</class>
 		<class>com.lapsa.insurance.domain.RequesterData</class>
-		<class>com.lapsa.insurance.domain.Image</class>
 		<class>com.lapsa.insurance.domain.CalculationData</class>
 		<class>com.lapsa.insurance.domain.InsuranceProduct</class>
 		<class>com.lapsa.insurance.domain.InsurancePeriodData</class>
@@ -39,7 +38,6 @@
 		<class>com.lapsa.insurance.domain.crm.UserGroup</class>
 		<class>com.lapsa.insurance.domain.Request</class>
 		<class>com.lapsa.insurance.domain.DriverLicenseData</class>
-		<class>com.lapsa.insurance.domain.SidedScannedDocument</class>
 		<class>com.lapsa.insurance.domain.InsuranceRequest</class>
 		<class>com.lapsa.insurance.domain.InsurantData</class>
 		<class>com.lapsa.insurance.domain.CompanyPointOfSale</class>

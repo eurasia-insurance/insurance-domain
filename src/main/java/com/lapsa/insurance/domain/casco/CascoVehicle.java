@@ -2,29 +2,21 @@ package com.lapsa.insurance.domain.casco;
 
 import static com.lapsa.insurance.domain.DisplayNameElements.*;
 
-import java.util.Arrays;
 import java.util.Currency;
 import java.util.Locale;
 import java.util.StringJoiner;
 
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.lapsa.insurance.domain.Image;
 import com.lapsa.insurance.domain.Vehicle;
 import com.lapsa.insurance.domain.VehicleCertificateData;
 import com.lapsa.insurance.elements.CascoCarAgeClass;
 
-import tech.lapsa.java.commons.function.MyFunctions;
-import tech.lapsa.java.commons.function.MyObjects;
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localized;
 import tech.lapsa.java.commons.util.MyCurrencies;
@@ -46,32 +38,6 @@ public class CascoVehicle extends Vehicle {
     @Enumerated(EnumType.STRING)
     @Column(name = "VEHICLE_CAR_AGE_CLASS")
     private CascoCarAgeClass carAgeClass;
-
-    @OneToOne(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
-    @JoinColumn(name = "VIEW1_IMAGE_ID")
-    private Image view1;
-
-    @OneToOne(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
-    @JoinColumn(name = "VIEW2_IMAGE_ID")
-    private Image view2;
-
-    @OneToOne(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
-    @JoinColumn(name = "VIEW3_IMAGE_ID")
-    private Image view3;
-
-    @OneToOne(fetch = FetchType.EAGER, orphanRemoval = true, cascade = CascadeType.ALL)
-    @JoinColumn(name = "VIEW4_IMAGE_ID")
-    private Image view4;
-
-    @Override
-    public void unlazy() {
-	super.unlazy();
-	Arrays.asList(getView1(), getView2(), getView3(), getView4()) //
-		.stream() //
-		.filter(MyObjects::nonNull) //
-		.map(Image::getContent) //
-		.forEach(MyFunctions.voidConsumer());
-    }
 
     @Override
     public String localized(final LocalizationVariant variant, final Locale locale) {
@@ -120,37 +86,5 @@ public class CascoVehicle extends Vehicle {
 
     public void setCarAgeClass(final CascoCarAgeClass carAgeClass) {
 	this.carAgeClass = carAgeClass;
-    }
-
-    public Image getView1() {
-	return view1;
-    }
-
-    public void setView1(final Image view1) {
-	this.view1 = view1;
-    }
-
-    public Image getView2() {
-	return view2;
-    }
-
-    public void setView2(final Image view2) {
-	this.view2 = view2;
-    }
-
-    public Image getView3() {
-	return view3;
-    }
-
-    public void setView3(final Image view3) {
-	this.view3 = view3;
-    }
-
-    public Image getView4() {
-	return view4;
-    }
-
-    public void setView4(final Image view4) {
-	this.view4 = view4;
     }
 }
