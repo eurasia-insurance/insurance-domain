@@ -1,5 +1,22 @@
 -- MIGRATION SCRIPT FROM 2.5 TO 2.6
 
+
+
+
+-- --->> MIGRATION FROM 2.5 TO 2.5.1
+
+/*
+ * policy termination reason
+ */
+
+ALTER TABLE POLICY
+	ADD COLUMN TERMINATION_REASON VARCHAR(255) AFTER POLICY_NUMBER;
+
+-- <<--- MIGRATION FROM 2.5 TO 2.5.1
+
+
+
+
 /*
  * VERSION TABLE
  */
