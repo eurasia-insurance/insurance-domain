@@ -24,7 +24,7 @@
       97 com.lapsa.insurance.domain.PostAddress
      101 com.lapsa.insurance.domain.PrivilegerCertificateData
      103 com.lapsa.insurance.domain.ResidenceData
-     107 com.lapsa.insurance.domain.TwoSidedDocumentScan
+     107 
      109 com.lapsa.insurance.domain.VehicleCertificateData
      113 com.lapsa.insurance.domain.casco.CascoDriver
      127 com.lapsa.insurance.domain.PaymentData
