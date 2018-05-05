@@ -25,8 +25,8 @@ import javax.persistence.TemporalType;
 
 import com.lapsa.insurance.domain.EntitySuperclass;
 import com.lapsa.insurance.domain.InsuranceProduct;
-import com.lapsa.insurance.domain.InsuranceProductTerminationReason;
 import com.lapsa.insurance.domain.InsurantData;
+import com.lapsa.insurance.elements.CancelationReason;
 
 import tech.lapsa.java.commons.function.MyNumbers;
 import tech.lapsa.java.commons.function.MyObjects;
@@ -159,13 +159,13 @@ public class Policy extends InsuranceProduct {
     @Basic
     @Enumerated(EnumType.STRING)
     @Column(name = "TERMINATION_REASON")
-    private InsuranceProductTerminationReason terminationReason;
+    private CancelationReason terminationReason;
 
-    public InsuranceProductTerminationReason getTerminationReason() {
+    public CancelationReason getTerminationReason() {
 	return terminationReason;
     }
 
-    public void setTerminationReason(InsuranceProductTerminationReason terminationReason) {
+    public void setTerminationReason(CancelationReason terminationReason) {
 	this.terminationReason = terminationReason;
     }
 
