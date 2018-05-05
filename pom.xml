@@ -24,7 +24,7 @@
 		<patterns-domain.version>1.0</patterns-domain.version>
 		<lapsa-arquillian-test.version>1.2</lapsa-arquillian-test.version>
 		<!-- oldies -->
-		<insurance-lib.version>2.5-SNAPSHOT</insurance-lib.version>
+		<insurance-lib.version>2.4.2</insurance-lib.version>
 		<kz-lib.version>3.2.5</kz-lib.version>
 		<international-lib.version>3.3.1</international-lib.version>
 		<!-- PLUGINS dependencies versions -->
