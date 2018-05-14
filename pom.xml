@@ -21,7 +21,7 @@
 		<payara-bom.version>4.1.2-2</payara-bom.version>
 		<!-- tech -->
 		<javax-jpa-commons.version>1.1</javax-jpa-commons.version>
-		<patterns-domain.version>1.0</patterns-domain.version>
+		<patterns-domain.version>1.1</patterns-domain.version>
 		<lapsa-arquillian-test.version>1.2</lapsa-arquillian-test.version>
 		<!-- oldies -->
 		<insurance-lib.version>2.4.2</insurance-lib.version>

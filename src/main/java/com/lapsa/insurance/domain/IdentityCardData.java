@@ -26,7 +26,7 @@ import tech.lapsa.patterns.domain.HashCodePrime;
 @Entity
 @Table(name = "IDENTITY_CARD")
 @HashCodePrime(37)
-public class IdentityCardData extends SidedScannedDocument {
+public class IdentityCardData extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 

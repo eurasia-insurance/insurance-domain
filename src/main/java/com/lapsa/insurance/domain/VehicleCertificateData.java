@@ -21,7 +21,7 @@ import tech.lapsa.patterns.domain.HashCodePrime;
 @Entity
 @Table(name = "VEHICLE_CERTIFICATE")
 @HashCodePrime(109)
-public class VehicleCertificateData extends SidedScannedDocument {
+public class VehicleCertificateData extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 
