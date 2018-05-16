@@ -1,10 +1,10 @@
        3 com.lapsa.insurance.domain.CalculationData
-       5 com.lapsa.insurance.domain.CompanyContactEmail
-       7 com.lapsa.insurance.domain.CompanyContactPhone
-      11 com.lapsa.insurance.domain.CompanyPointOfSale
+       5 
+       7 
+      11 
       13 com.lapsa.insurance.domain.ContactData
       17 com.lapsa.insurance.domain.DriverLicenseData
-      19 com.lapsa.insurance.domain.GeoPoint
+      19 
       23 com.lapsa.insurance.domain.GPWParticipantCertificateData
       29 com.lapsa.insurance.domain.crm.UTMData
       31 com.lapsa.insurance.domain.HandicaptedCertificateData
@@ -21,7 +21,7 @@
       79 com.lapsa.insurance.domain.policy.Policy
       83 com.lapsa.insurance.domain.policy.PolicyRequest
       89 com.lapsa.insurance.domain.ObtainingData
-      97 com.lapsa.insurance.domain.PostAddress
+      97 
      101 com.lapsa.insurance.domain.PrivilegerCertificateData
      103 com.lapsa.insurance.domain.ResidenceData
      107 
