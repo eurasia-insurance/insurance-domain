@@ -36,17 +36,6 @@ public class Lead extends IntIdEntitySuperclass {
     protected Lead() {
     }
 
-    // updated
-
-    @Basic
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "UPDATED")
-    protected Instant updatedOn;
-
-    public Instant getUpdatedOn() {
-	return updatedOn;
-    }
-
     // accepted
 
     @Basic
