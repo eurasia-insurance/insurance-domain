@@ -3,6 +3,7 @@ package tech.lapsa.insurance.domain;
 import static javax.persistence.CascadeType.*;
 import static javax.persistence.FetchType.*;
 
+import java.util.Collections;
 import java.util.List;
 
 import javax.persistence.DiscriminatorValue;
@@ -11,8 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import tech.lapsa.java.commons.function.MyCollectors;
-import tech.lapsa.java.commons.function.MyStreams;
+import tech.lapsa.java.commons.function.MyObjects;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
 @Entity
@@ -35,8 +35,7 @@ public class PolicyCalculation extends Calculation {
     protected List<PolicyCalculationDriver> drivers;
 
     public List<PolicyCalculationDriver> getDrivers() {
-	return MyStreams.orEmptyOf(drivers)
-		.collect(MyCollectors.unmodifiableList());
+	return MyObjects.nullOrGet(drivers, Collections::unmodifiableList);
     }
 
     // vehicles
@@ -46,7 +45,6 @@ public class PolicyCalculation extends Calculation {
     protected List<PolicyCalculationVehicle> vehicles;
 
     public List<PolicyCalculationVehicle> getVehicles() {
-	return MyStreams.orEmptyOf(vehicles)
-		.collect(MyCollectors.unmodifiableList());
+	return MyObjects.nullOrGet(vehicles, Collections::unmodifiableList);
     }
 }

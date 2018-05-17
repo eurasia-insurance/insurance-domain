@@ -19,7 +19,9 @@ import javax.persistence.TemporalType;
 
 import com.lapsa.international.phone.PhoneNumber;
 
+import tech.lapsa.java.commons.function.MyCollections;
 import tech.lapsa.java.commons.function.MyCollectors;
+import tech.lapsa.java.commons.function.MyObjects;
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.function.MyStreams;
 import tech.lapsa.patterns.domain.HashCodePrime;
@@ -119,9 +121,10 @@ public class Lead extends IntIdEntitySuperclass {
     protected List<Calculation> calculations;
 
     public List<Calculation> getCalculations() {
-	return MyStreams.orEmptyOf(calculations)
-		.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
-		.collect(MyCollectors.unmodifiableList());
+	return MyObjects.nullOrGet(calculations,
+		x -> x.stream()
+			.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
+			.collect(MyCollectors.unmodifiableList()));
     }
 
     public Optional<Calculation> optFirstCalculation() {
@@ -131,7 +134,13 @@ public class Lead extends IntIdEntitySuperclass {
     }
 
     public boolean isHasCalculation() {
-	return optFirstCalculation().isPresent();
+	return MyCollections.nonEmpty(calculations);
+    }
+
+    void _addCalculation(final Calculation calculation) {
+	assert MyObjects.nonNull(calculation);
+	(calculations = MyObjects.getIfNull(calculations, ArrayList::new))
+		.add(calculation);
     }
 
     // paymentOrders
@@ -140,9 +149,10 @@ public class Lead extends IntIdEntitySuperclass {
     protected List<PaymentOrder> paymentOrders;
 
     public List<PaymentOrder> getPaymentOrders() {
-	return MyStreams.orEmptyOf(paymentOrders)
-		.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
-		.collect(MyCollectors.unmodifiableList());
+	return MyObjects.nullOrGet(paymentOrders,
+		x -> x.stream()
+			.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
+			.collect(MyCollectors.unmodifiableList()));
     }
 
     public Optional<PaymentOrder> optFirstPaymentOrder() {
@@ -152,13 +162,13 @@ public class Lead extends IntIdEntitySuperclass {
     }
 
     public boolean isHasPaymentOrder() {
-	return optFirstCalculation().isPresent();
+	return MyCollections.nonEmpty(paymentOrders);
     }
 
     void _addPaymentOrder(final PaymentOrder paymentOrder) {
-	if (paymentOrders == null)
-	    paymentOrders = new ArrayList<>();
-	paymentOrders.add(paymentOrder);
+	assert MyObjects.nonNull(paymentOrder);
+	(paymentOrders = MyObjects.getIfNull(paymentOrders, ArrayList::new))
+		.add(paymentOrder);
     }
 
     // payments
@@ -167,9 +177,10 @@ public class Lead extends IntIdEntitySuperclass {
     protected List<Payment> payments;
 
     public List<Payment> getPayments() {
-	return MyStreams.orEmptyOf(payments)
-		.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
-		.collect(MyCollectors.unmodifiableList());
+	return MyObjects.nullOrGet(payments,
+		x -> x.stream()
+			.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
+			.collect(MyCollectors.unmodifiableList()));
     }
 
     public Optional<Payment> optFirstPayment() {
@@ -179,13 +190,13 @@ public class Lead extends IntIdEntitySuperclass {
     }
 
     public boolean isHasPayment() {
-	return optFirstCalculation().isPresent();
+	return MyCollections.nonEmpty(payments);
     }
 
     void _addPayment(final Payment payment) {
-	if (payments == null)
-	    payments = new ArrayList<>();
-	payments.add(payment);
+	assert MyObjects.nonNull(payment);
+	(payments = MyObjects.getIfNull(payments, ArrayList::new))
+		.add(payment);
     }
 
     // contracts
@@ -194,9 +205,10 @@ public class Lead extends IntIdEntitySuperclass {
     protected List<Contract> contracts;
 
     public List<Contract> getContracts() {
-	return MyStreams.orEmptyOf(contracts)
-		.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
-		.collect(MyCollectors.unmodifiableList());
+	return MyObjects.nullOrGet(contracts,
+		x -> x.stream()
+			.sorted(CreationParameteredIntIdEntitySuperclass.CREATION_REVERSE_ORDER_COMPARATOR)
+			.collect(MyCollectors.unmodifiableList()));
     }
 
     public Optional<Contract> optFirstContract() {
@@ -206,12 +218,12 @@ public class Lead extends IntIdEntitySuperclass {
     }
 
     public boolean isHasContract() {
-	return optFirstCalculation().isPresent();
+	return MyCollections.nonEmpty(contracts);
     }
 
     void _addContract(final Contract contract) {
-	if (contracts == null)
-	    contracts = new ArrayList<>();
-	contracts.add(contract);
+	assert MyObjects.nonNull(contract);
+	(contracts = MyObjects.getIfNull(contracts, ArrayList::new))
+		.add(contract);
     }
 }
