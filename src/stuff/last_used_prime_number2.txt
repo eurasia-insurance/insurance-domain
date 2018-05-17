@@ -6,7 +6,7 @@
       17 tech.lapsa.insurance.domain.ManualCalculation
       19 tech.lapsa.insurance.domain.PaymentOrder
       23 tech.lapsa.insurance.domain.Payment
-      29 tech.lapsa.insurance.domain.Contract
+      29 
       31 tech.lapsa.insurance.domain.CascoCalculation
       37 tech.lapsa.insurance.domain.CascoCalculationVehicle
       41 

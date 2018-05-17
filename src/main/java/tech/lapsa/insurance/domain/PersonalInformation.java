@@ -18,7 +18,7 @@ public class PersonalInformation extends Domain {
     // idNumber
 
     @Basic
-    @Column(name = "ID_NUMBER")
+    @Column(name = "IDNUMBER")
     protected TaxpayerNumber idNumber;
 
     public TaxpayerNumber getIdNumber() {

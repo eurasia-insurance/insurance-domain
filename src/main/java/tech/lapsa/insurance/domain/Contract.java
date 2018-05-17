@@ -6,16 +6,18 @@ import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
 import javax.persistence.Basic;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
-import tech.lapsa.patterns.domain.HashCodePrime;
-
 @Entity
-@Table(name = "AGREEMENT")
-@HashCodePrime(29)
-public class Contract extends LeadAttachement {
+@Table(name = "CONTRACT")
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "DISCR_TYPE")
+public abstract class Contract extends LeadAttachement {
 
     private static final long serialVersionUID = 1L;
 
@@ -48,7 +50,7 @@ public class Contract extends LeadAttachement {
 
     @Embedded
     @AttributeOverrides({
-	    @AttributeOverride(name = "idNumber", column = @Column(name = "PARTY_ID_NUMBER")),
+	    @AttributeOverride(name = "idNumber", column = @Column(name = "PARTY_IDNUMBER")),
 	    @AttributeOverride(name = "name", column = @Column(name = "PARTY_NAME")),
 	    @AttributeOverride(name = "firstName", column = @Column(name = "PARTY_FIRST_NAME")),
 	    @AttributeOverride(name = "surename", column = @Column(name = "PARTY_SURENAME")),
