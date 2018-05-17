@@ -43,10 +43,8 @@
 		<validation-mode>NONE</validation-mode>
 
 		<properties>
-			<property name="javax.persistence.schema-generation.database.action"
-				value="create" />
-			<property name="javax.persistence.schema-generation.scripts.action"
-				value="none" />
+			<property name="javax.persistence.schema-generation.database.action" value="create" />
+			<property name="javax.persistence.schema-generation.scripts.action" value="none" />
 			<property name="eclipselink.logging.parameters" value="true" />
 			<property name="eclipselink.weaving" value="static" />
 		</properties>

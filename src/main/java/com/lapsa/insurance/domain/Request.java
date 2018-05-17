@@ -48,11 +48,6 @@ public abstract class Request extends EntitySuperclass {
 
     @Basic
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "UPDATED")
-    protected Instant updated;
-
-    @Basic
-    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "ACCEPTED")
     protected Instant accepted;
 
@@ -146,14 +141,6 @@ public abstract class Request extends EntitySuperclass {
 
     public void setCreated(final Instant created) {
 	this.created = created;
-    }
-
-    public Instant getUpdated() {
-	return updated;
-    }
-
-    public void setUpdated(final Instant updated) {
-	this.updated = updated;
     }
 
     public Instant getClosed() {

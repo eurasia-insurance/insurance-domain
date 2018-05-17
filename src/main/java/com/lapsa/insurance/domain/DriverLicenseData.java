@@ -20,7 +20,7 @@ import tech.lapsa.patterns.domain.HashCodePrime;
 @Entity
 @Table(name = "DRIVER_LICENSE")
 @HashCodePrime(17)
-public class DriverLicenseData extends SidedScannedDocument {
+public class DriverLicenseData extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
 
