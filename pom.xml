@@ -25,7 +25,7 @@
 		<lapsa-arquillian-test.version>1.2</lapsa-arquillian-test.version>
 		<!-- oldies -->
 		<insurance-lib.version>2.4.2</insurance-lib.version>
-		<kz-lib.version>3.2.5</kz-lib.version>
+		<kz-lib.version>3.3-SNAPSHOT</kz-lib.version>
 		<international-lib.version>3.3.1</international-lib.version>
 		<!-- PLUGINS dependencies versions -->
 		<!-- version number copied from javax-javaee-web-bom -->
