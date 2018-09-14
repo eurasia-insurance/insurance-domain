@@ -7,13 +7,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "INSURANCE_VER_2_5_3")
+@Table(name = "INSURANCE_VER_2_6")
 @Access(AccessType.PROPERTY)
 public class InsuranceVersion {
 
     @Id
     public int getDummy() {
-	return 0;
+        return 0;
     }
 
     public void setDummy(final int dummy) {
