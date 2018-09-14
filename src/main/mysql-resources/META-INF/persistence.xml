@@ -22,25 +22,20 @@
 		<class>com.lapsa.insurance.domain.CalculationData</class>
 		<class>com.lapsa.insurance.domain.InsuranceProduct</class>
 		<class>com.lapsa.insurance.domain.InsurancePeriodData</class>
-		<class>com.lapsa.insurance.domain.GeoPoint</class>
 		<class>com.lapsa.insurance.domain.PaymentData</class>
 		<class>com.lapsa.insurance.domain.PersonalData</class>
 		<class>com.lapsa.insurance.domain.crm.InetAddrData</class>
 		<class>com.lapsa.insurance.domain.IdentityCardData</class>
 		<class>com.lapsa.insurance.domain.crm.UTMData</class>
-		<class>com.lapsa.insurance.domain.PostAddress</class>
 		<class>com.lapsa.insurance.domain.VehicleCertificateData</class>
 		<class>com.lapsa.insurance.domain.crm.User</class>
 		<class>com.lapsa.insurance.domain.crm.UserLogin</class>
-		<class>com.lapsa.insurance.domain.CompanyContactEmail</class>
-		<class>com.lapsa.insurance.domain.CompanyContactPhone</class>
 		<class>com.lapsa.insurance.domain.CompanyData</class>
 		<class>com.lapsa.insurance.domain.crm.UserGroup</class>
 		<class>com.lapsa.insurance.domain.Request</class>
 		<class>com.lapsa.insurance.domain.DriverLicenseData</class>
 		<class>com.lapsa.insurance.domain.InsuranceRequest</class>
 		<class>com.lapsa.insurance.domain.InsurantData</class>
-		<class>com.lapsa.insurance.domain.CompanyPointOfSale</class>
 		<class>com.lapsa.insurance.domain.CallbackRequest</class>
 		<class>com.lapsa.insurance.domain.Vehicle</class>
 		<class>com.lapsa.insurance.domain.Driver</class>

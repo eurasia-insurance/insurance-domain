@@ -13,7 +13,7 @@ public class InsuranceVersion {
 
     @Id
     public int getDummy() {
-	return 0;
+        return 0;
     }
 
     public void setDummy(final int dummy) {
