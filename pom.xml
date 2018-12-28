@@ -338,9 +338,9 @@
 	</build>
 
 	<scm>
-		<connection>scm:git:https://gitlab.lapsa.tech/lapsa/insurance/domain.git</connection>
-		<developerConnection>scm:git:https://gitlab.lapsa.tech/lapsa/insurance/domain.git</developerConnection>
-		<tag>v2.5.3</tag>
+		<connection>scm:git:https://github.com/eurasia-insurance/insurance-domain.git</connection>
+		<developerConnection>scm:git:https://github.com/eurasia-insurance/insurance-domain.git</developerConnection>
+		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
