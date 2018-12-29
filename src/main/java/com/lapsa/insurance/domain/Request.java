@@ -48,8 +48,8 @@ public abstract class Request extends EntitySuperclass {
 
     @Basic
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "ACCEPTED")
-    protected Instant accepted;
+    @Column(name = "ACCEPTED") // TODO rename column to PICKED
+    protected Instant picked;
 
     @Basic
     @Temporal(TemporalType.TIMESTAMP)
@@ -100,8 +100,8 @@ public abstract class Request extends EntitySuperclass {
 	    CascadeType.MERGE,
 	    CascadeType.PERSIST,
 	    CascadeType.REFRESH })
-    @JoinColumn(name = "ACCEPTED_BY_USER_ID")
-    protected User acceptedBy;
+    @JoinColumn(name = "ACCEPTED_BY_USER_ID") //TODO rename column to PICKED_BY_USER_ID
+    protected User pickedBy;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = {
 	    CascadeType.DETACH,
@@ -128,7 +128,7 @@ public abstract class Request extends EntitySuperclass {
     public void unlazy() {
 	super.unlazy();
 	MyOptionals.of(getCreatedBy()).ifPresent(Domain::unlazy);
-	MyOptionals.of(getAcceptedBy()).ifPresent(Domain::unlazy);
+	MyOptionals.of(getPickedBy()).ifPresent(Domain::unlazy);
 	MyOptionals.of(getCompletedBy()).ifPresent(Domain::unlazy);
 	MyOptionals.of(getClosedBy()).ifPresent(Domain::unlazy);
     }
@@ -159,12 +159,12 @@ public abstract class Request extends EntitySuperclass {
 	this.createdBy = createdBy;
     }
 
-    public Instant getAccepted() {
-	return accepted;
+    public Instant getPicked() {
+	return picked;
     }
 
-    public void setAccepted(final Instant accepted) {
-	this.accepted = accepted;
+    public void setPicked(final Instant picked) {
+	this.picked = picked;
     }
 
     public Instant getCompleted() {
@@ -207,12 +207,12 @@ public abstract class Request extends EntitySuperclass {
 	this.utmData = utmData;
     }
 
-    public User getAcceptedBy() {
-	return acceptedBy;
+    public User getPickedBy() {
+	return pickedBy;
     }
 
-    public void setAcceptedBy(final User acceptedBy) {
-	this.acceptedBy = acceptedBy;
+    public void setPickedBy(final User pickedBy) {
+	this.pickedBy = pickedBy;
     }
 
     public User getCompletedBy() {
