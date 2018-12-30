@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "INSURANCE_VER_2_6")
+@Table(name = "INSURANCE_VER_10")
 @Access(AccessType.PROPERTY)
 public class InsuranceVersion {
 
