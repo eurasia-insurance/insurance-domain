@@ -48,7 +48,7 @@ public abstract class Request extends EntitySuperclass {
 
     @Basic
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "ACCEPTED") // TODO rename column to PICKED
+    @Column(name = "PICKED") 
     protected Instant picked;
 
     @Basic
@@ -100,7 +100,7 @@ public abstract class Request extends EntitySuperclass {
 	    CascadeType.MERGE,
 	    CascadeType.PERSIST,
 	    CascadeType.REFRESH })
-    @JoinColumn(name = "ACCEPTED_BY_USER_ID") //TODO rename column to PICKED_BY_USER_ID
+    @JoinColumn(name = "PICKED_BY_USER_ID")
     protected User pickedBy;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = {
