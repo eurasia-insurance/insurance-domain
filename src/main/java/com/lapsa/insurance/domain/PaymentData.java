@@ -35,7 +35,7 @@ public class PaymentData extends Domain {
     private PaymentStatus status = PaymentStatus.UNDEFINED;
 
     @Basic
-    @Column(name = "PAYMENT_INVOICE_NUMBER")
+    @Column(name = "INVOICE_NUMBER")
     private String invoiceNumber;
 
     @Basic
