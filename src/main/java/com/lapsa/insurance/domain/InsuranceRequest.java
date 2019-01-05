@@ -10,8 +10,8 @@ import javax.persistence.Table;
 
 import com.lapsa.insurance.elements.InsuranceProductType;
 import com.lapsa.insurance.elements.InsuranceRequestType;
-import com.lapsa.insurance.elements.TransactionProblem;
-import com.lapsa.insurance.elements.TransactionStatus;
+import com.lapsa.insurance.elements.RequestCancelationReason;
+import com.lapsa.insurance.elements.ContractStatus;
 
 @Entity
 @Table(name = "INSURANCE_REQUEST")
@@ -29,13 +29,13 @@ public abstract class InsuranceRequest extends Request {
 
     @Basic
     @Enumerated(EnumType.STRING)
-    @Column(name = "TRANSACTION_STATUS")
-    protected TransactionStatus transactionStatus;
+    @Column(name = "CONTRACT_STATUS")
+    protected ContractStatus contractStatus;
 
     @Basic
     @Enumerated(EnumType.STRING)
-    @Column(name = "TRANSACTION_PROBLEM")
-    protected TransactionProblem transactionProblem;
+    @Column(name = "REQUEST_CANCELATION_REASON")
+    protected RequestCancelationReason requestCancelationReason;
 
     @Basic
     @Column(name = "AGREEMENT_NUMBER")
@@ -58,20 +58,20 @@ public abstract class InsuranceRequest extends Request {
 	this.type = type;
     }
 
-    public TransactionStatus getTransactionStatus() {
-	return transactionStatus;
+    public ContractStatus getContractStatus() {
+	return contractStatus;
     }
 
-    public void setTransactionStatus(final TransactionStatus transactionStatus) {
-	this.transactionStatus = transactionStatus;
+    public void setContractStatus(final ContractStatus contractStatus) {
+	this.contractStatus = contractStatus;
     }
 
-    public TransactionProblem getTransactionProblem() {
-	return transactionProblem;
+    public RequestCancelationReason getRequestCancelationReason() {
+	return requestCancelationReason;
     }
 
-    public void setTransactionProblem(final TransactionProblem transactionProblem) {
-	this.transactionProblem = transactionProblem;
+    public void setRequestCancelationReason(final RequestCancelationReason requestCancelationReason) {
+	this.requestCancelationReason = requestCancelationReason;
     }
 
     public PaymentData getPayment() {
