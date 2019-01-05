@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 import com.lapsa.insurance.elements.InsuranceProductType;
 import com.lapsa.insurance.elements.InsuranceRequestType;
-import com.lapsa.insurance.elements.TransactionProblem;
+import com.lapsa.insurance.elements.RequestCancelationReason;
 import com.lapsa.insurance.elements.ContractStatus;
 
 @Entity
@@ -34,8 +34,8 @@ public abstract class InsuranceRequest extends Request {
 
     @Basic
     @Enumerated(EnumType.STRING)
-    @Column(name = "TRANSACTION_PROBLEM")
-    protected TransactionProblem transactionProblem;
+    @Column(name = "REQUEST_CANCELATION_REASON")
+    protected RequestCancelationReason requestCancelationReason;
 
     @Basic
     @Column(name = "AGREEMENT_NUMBER")
@@ -66,12 +66,12 @@ public abstract class InsuranceRequest extends Request {
 	this.contractStatus = contractStatus;
     }
 
-    public TransactionProblem getTransactionProblem() {
-	return transactionProblem;
+    public RequestCancelationReason getRequestCancelationReason() {
+	return requestCancelationReason;
     }
 
-    public void setTransactionProblem(final TransactionProblem transactionProblem) {
-	this.transactionProblem = transactionProblem;
+    public void setRequestCancelationReason(final RequestCancelationReason requestCancelationReason) {
+	this.requestCancelationReason = requestCancelationReason;
     }
 
     public PaymentData getPayment() {
