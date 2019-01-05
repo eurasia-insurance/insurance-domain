@@ -29,7 +29,7 @@ public abstract class InsuranceRequest extends Request {
 
     @Basic
     @Enumerated(EnumType.STRING)
-    @Column(name = "TRANSACTION_STATUS")
+    @Column(name = "CONTRACT_STATUS")
     protected ContractStatus contractStatus;
 
     @Basic
