@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 import com.lapsa.insurance.elements.InsuranceProductType;
 import com.lapsa.insurance.elements.InsuranceRequestType;
-import com.lapsa.insurance.elements.InsuranceRequestCancelationReason;
+import com.lapsa.insurance.elements.InsuranceRequestCancellationReason;
 import com.lapsa.insurance.elements.InsuranceRequestStatus;
 
 @Entity
@@ -34,8 +34,8 @@ public abstract class InsuranceRequest extends Request {
 
     @Basic
     @Enumerated(EnumType.STRING)
-    @Column(name = "INSURANCE_REQUEST_CANCELATION_REASON")
-    protected InsuranceRequestCancelationReason insuranceRequestCancelationReason;
+    @Column(name = "INSURANCE_REQUEST_CANCELLATION_REASON")
+    protected InsuranceRequestCancellationReason insuranceRequestCancellationReason;
 
     @Basic
     @Column(name = "AGREEMENT_NUMBER")
@@ -66,12 +66,12 @@ public abstract class InsuranceRequest extends Request {
 	this.insuranceRequestStatus = insuranceRequestStatus;
     }
 
-    public InsuranceRequestCancelationReason getInsuranceRequestCancelationReason() {
-	return insuranceRequestCancelationReason;
+    public InsuranceRequestCancellationReason getInsuranceRequestCancellationReason() {
+	return insuranceRequestCancellationReason;
     }
 
-    public void setInsuranceRequestCancelationReason(final InsuranceRequestCancelationReason insuranceRequestCancelationReason) {
-	this.insuranceRequestCancelationReason = insuranceRequestCancelationReason;
+    public void setInsuranceRequestCancellationReason(final InsuranceRequestCancellationReason insuranceRequestCancellationReason) {
+	this.insuranceRequestCancellationReason = insuranceRequestCancellationReason;
     }
 
     public PaymentData getPayment() {
