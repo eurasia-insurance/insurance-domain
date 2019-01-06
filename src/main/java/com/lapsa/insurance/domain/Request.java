@@ -26,20 +26,21 @@ import com.lapsa.insurance.domain.crm.InetAddrData;
 import com.lapsa.insurance.domain.crm.UTMData;
 import com.lapsa.insurance.domain.crm.User;
 import com.lapsa.insurance.elements.ProgressStatus;
-import com.lapsa.insurance.elements.RequestStatus;
 
 import tech.lapsa.java.commons.function.MyOptionals;
 
 @Entity
 @Table(name = "REQUEST", indexes = { //
-	@Index(name = "REQUEST_IDX01", columnList = "STATUS"), //
-	@Index(name = "REQUEST_IDX02", columnList = "CREATED"), //
-	@Index(name = "REQUEST_IDX03", columnList = "CLOSED") //
+	@Index(name = "IX_REQUEST_CREATED", columnList = "CREATED"), //
+	@Index(name = "IX_REQUEST_ARCHIVED", columnList = "ARCHIVED")
 })
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Request extends EntitySuperclass {
 
     private static final long serialVersionUID = 1L;
+
+    public Request() {
+    }
 
     @Basic
     @Temporal(TemporalType.TIMESTAMP)
@@ -48,7 +49,7 @@ public abstract class Request extends EntitySuperclass {
 
     @Basic
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "PICKED") 
+    @Column(name = "PICKED")
     protected Instant picked;
 
     @Basic
@@ -57,17 +58,8 @@ public abstract class Request extends EntitySuperclass {
     protected Instant completed;
 
     @Basic
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "CLOSED")
-    protected Instant closed;
-
-    public Request() {
-    }
-
-    @Basic
-    @Enumerated(EnumType.STRING)
-    @Column(name = "STATUS")
-    protected RequestStatus status = RequestStatus.OPEN;
+    @Column(name = "ARCHIVED")
+    protected boolean archived = false;
 
     @Basic
     @Enumerated(EnumType.STRING)
@@ -111,14 +103,6 @@ public abstract class Request extends EntitySuperclass {
     @JoinColumn(name = "COMPLETED_BY_USER_ID")
     protected User completedBy;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = {
-	    CascadeType.DETACH,
-	    CascadeType.MERGE,
-	    CascadeType.PERSIST,
-	    CascadeType.REFRESH })
-    @JoinColumn(name = "CLOSED_BY_USER_ID")
-    protected User closedBy;
-
     @Basic
     @Lob
     @Column(name = "NOTE")
@@ -130,7 +114,6 @@ public abstract class Request extends EntitySuperclass {
 	MyOptionals.of(getCreatedBy()).ifPresent(Domain::unlazy);
 	MyOptionals.of(getPickedBy()).ifPresent(Domain::unlazy);
 	MyOptionals.of(getCompletedBy()).ifPresent(Domain::unlazy);
-	MyOptionals.of(getClosedBy()).ifPresent(Domain::unlazy);
     }
 
     // GENERATED
@@ -143,12 +126,12 @@ public abstract class Request extends EntitySuperclass {
 	this.created = created;
     }
 
-    public Instant getClosed() {
-	return closed;
+    public boolean getArchived() {
+	return archived;
     }
 
-    public void setClosed(final Instant closed) {
-	this.closed = closed;
+    public void setArchived(final boolean archived) {
+	this.archived = archived;
     }
 
     public User getCreatedBy() {
@@ -173,14 +156,6 @@ public abstract class Request extends EntitySuperclass {
 
     public void setCompleted(final Instant completed) {
 	this.completed = completed;
-    }
-
-    public RequestStatus getStatus() {
-	return status;
-    }
-
-    public void setStatus(final RequestStatus status) {
-	this.status = status;
     }
 
     public ProgressStatus getProgressStatus() {
@@ -221,14 +196,6 @@ public abstract class Request extends EntitySuperclass {
 
     public void setCompletedBy(final User completedBy) {
 	this.completedBy = completedBy;
-    }
-
-    public User getClosedBy() {
-	return closedBy;
-    }
-
-    public void setClosedBy(final User closedBy) {
-	this.closedBy = closedBy;
     }
 
     public String getNote() {
