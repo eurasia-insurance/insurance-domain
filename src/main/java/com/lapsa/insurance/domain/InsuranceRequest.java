@@ -10,8 +10,8 @@ import javax.persistence.Table;
 
 import com.lapsa.insurance.elements.InsuranceProductType;
 import com.lapsa.insurance.elements.InsuranceRequestType;
-import com.lapsa.insurance.elements.RequestCancelationReason;
-import com.lapsa.insurance.elements.ContractStatus;
+import com.lapsa.insurance.elements.InsuranceRequestCancelationReason;
+import com.lapsa.insurance.elements.InsuranceRequestStatus;
 
 @Entity
 @Table(name = "INSURANCE_REQUEST")
@@ -29,13 +29,13 @@ public abstract class InsuranceRequest extends Request {
 
     @Basic
     @Enumerated(EnumType.STRING)
-    @Column(name = "CONTRACT_STATUS")
-    protected ContractStatus contractStatus;
+    @Column(name = "INSURANCE_REQUEST_STATUS")
+    protected InsuranceRequestStatus insuranceRequestStatus;
 
     @Basic
     @Enumerated(EnumType.STRING)
-    @Column(name = "REQUEST_CANCELATION_REASON")
-    protected RequestCancelationReason requestCancelationReason;
+    @Column(name = "INSURANCE_REQUEST_CANCELATION_REASON")
+    protected InsuranceRequestCancelationReason insuranceRequestCancelationReason;
 
     @Basic
     @Column(name = "AGREEMENT_NUMBER")
@@ -58,20 +58,20 @@ public abstract class InsuranceRequest extends Request {
 	this.type = type;
     }
 
-    public ContractStatus getContractStatus() {
-	return contractStatus;
+    public InsuranceRequestStatus getInsuranceRequestStatus() {
+	return insuranceRequestStatus;
     }
 
-    public void setContractStatus(final ContractStatus contractStatus) {
-	this.contractStatus = contractStatus;
+    public void setInsuranceRequestStatus(final InsuranceRequestStatus insuranceRequestStatus) {
+	this.insuranceRequestStatus = insuranceRequestStatus;
     }
 
-    public RequestCancelationReason getRequestCancelationReason() {
-	return requestCancelationReason;
+    public InsuranceRequestCancelationReason getInsuranceRequestCancelationReason() {
+	return insuranceRequestCancelationReason;
     }
 
-    public void setRequestCancelationReason(final RequestCancelationReason requestCancelationReason) {
-	this.requestCancelationReason = requestCancelationReason;
+    public void setInsuranceRequestCancelationReason(final InsuranceRequestCancelationReason insuranceRequestCancelationReason) {
+	this.insuranceRequestCancelationReason = insuranceRequestCancelationReason;
     }
 
     public PaymentData getPayment() {
