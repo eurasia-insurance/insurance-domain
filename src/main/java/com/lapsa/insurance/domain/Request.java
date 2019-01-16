@@ -5,6 +5,7 @@ import java.time.Instant;
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -78,15 +79,27 @@ public abstract class Request extends EntitySuperclass {
     })
     protected InetAddrData inetAddrData = new InetAddrData();
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = true)
+    @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = {
+	    CascadeType.DETACH,
+	    CascadeType.MERGE,
+	    CascadeType.PERSIST,
+	    CascadeType.REFRESH })
     @JoinColumn(name = "CREATED_BY_USER_ID")
     protected User createdBy;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = true)
+    @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = {
+	    CascadeType.DETACH,
+	    CascadeType.MERGE,
+	    CascadeType.PERSIST,
+	    CascadeType.REFRESH })
     @JoinColumn(name = "PICKED_BY_USER_ID")
     protected User pickedBy;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = true)
+    @ManyToOne(fetch = FetchType.EAGER, optional = true, cascade = {
+	    CascadeType.DETACH,
+	    CascadeType.MERGE,
+	    CascadeType.PERSIST,
+	    CascadeType.REFRESH })
     @JoinColumn(name = "COMPLETED_BY_USER_ID")
     protected User completedBy;
 
