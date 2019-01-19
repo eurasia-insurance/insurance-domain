@@ -1,6 +1,7 @@
 package com.lapsa.insurance.domain;
 
 import java.time.Instant;
+import java.util.Arrays;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
@@ -164,6 +165,11 @@ public abstract class Request extends EntitySuperclass {
 
     public void setProgressStatus(final ProgressStatus progressStatus) {
 	this.progressStatus = progressStatus;
+    }
+
+    public boolean progressStatusIn(ProgressStatus... statuses) {
+	return Arrays.stream(statuses)
+		.anyMatch(it -> it.equals(getProgressStatus()));
     }
 
     public RequesterData getRequester() {

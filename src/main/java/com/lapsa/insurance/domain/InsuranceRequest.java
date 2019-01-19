@@ -1,5 +1,7 @@
 package com.lapsa.insurance.domain;
 
+import java.util.Arrays;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
@@ -60,6 +62,11 @@ public abstract class InsuranceRequest extends Request {
 
     public InsuranceRequestStatus getInsuranceRequestStatus() {
 	return insuranceRequestStatus;
+    }
+    
+    public boolean insuranceRequestStatusIn(InsuranceRequestStatus... statuses) {
+	return Arrays.stream(statuses)
+		.anyMatch(it -> it.equals(getInsuranceRequestStatus()));
     }
 
     public void setInsuranceRequestStatus(final InsuranceRequestStatus insuranceRequestStatus) {
