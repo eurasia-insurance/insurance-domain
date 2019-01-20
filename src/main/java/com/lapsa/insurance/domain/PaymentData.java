@@ -1,6 +1,10 @@
 package com.lapsa.insurance.domain;
 
-import static com.lapsa.insurance.domain.DisplayNameElements.*;
+import static com.lapsa.insurance.domain.DisplayNameElements.PAYMENT_DATA;
+import static com.lapsa.insurance.domain.DisplayNameElements.PAYMENT_INVOICE_NUMBER;
+import static com.lapsa.insurance.domain.DisplayNameElements.PAYMENT_PAYER_NAME;
+import static com.lapsa.insurance.domain.DisplayNameElements.PAYMENT_POST_INSTANT;
+import static com.lapsa.insurance.domain.DisplayNameElements.PAYMENT_POST_REFERENCE;
 
 import java.time.Instant;
 import java.util.Currency;
@@ -10,29 +14,19 @@ import java.util.StringJoiner;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 
-import com.lapsa.insurance.elements.PaymentStatus;
 import com.lapsa.international.localization.LocalizationLanguage;
 import com.lapsa.international.phone.PhoneNumber;
 
 import tech.lapsa.java.commons.function.MyOptionals;
-import tech.lapsa.java.commons.localization.Localized;
 import tech.lapsa.java.commons.localization.Localizeds;
 import tech.lapsa.kz.taxpayer.TaxpayerNumber;
 import tech.lapsa.patterns.domain.HashCodePrime;
 
+@SuppressWarnings("serial")
 @Embeddable
 @HashCodePrime(127)
 public class PaymentData extends Domain {
-
-    private static final long serialVersionUID = 1L;
-
-    @Basic
-    @Enumerated(EnumType.STRING)
-    @Column(name = "PAYMENT_STATUS")
-    private PaymentStatus status = PaymentStatus.UNDEFINED;
 
     @Basic
     @Column(name = "INVOICE_NUMBER")
@@ -116,12 +110,6 @@ public class PaymentData extends Domain {
 	final StringJoiner sj = new StringJoiner(", ", " ", "");
 	sj.setEmptyValue("");
 
-	MyOptionals.of(status) //
-		.filter(PaymentStatus::isDefined) //
-		.map(Localized.toLocalizedMapper(variant, locale)) //
-		.map(FIELD_STATUS.fieldAsCaptionMapper(variant, locale)) //
-		.ifPresent(sj::add);
-
 	MyOptionals.of(invoiceNumber) //
 		.map(PAYMENT_INVOICE_NUMBER.fieldAsCaptionMapper(variant, locale)) //
 		.ifPresent(sj::add);
@@ -145,155 +133,147 @@ public class PaymentData extends Domain {
 
     // GENERATED
 
-    public PaymentStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(PaymentStatus status) {
-        this.status = status;
-    }
-
     public String getInvoiceNumber() {
-        return invoiceNumber;
+	return invoiceNumber;
     }
 
     public void setInvoiceNumber(String invoiceNumber) {
-        this.invoiceNumber = invoiceNumber;
+	this.invoiceNumber = invoiceNumber;
     }
 
     public String getReference() {
-        return reference;
+	return reference;
     }
 
     public void setReference(String reference) {
-        this.reference = reference;
+	this.reference = reference;
     }
 
     public Instant getInstant() {
-        return instant;
+	return instant;
     }
 
     public void setInstant(Instant instant) {
-        this.instant = instant;
+	this.instant = instant;
     }
 
     public String getMethodName() {
-        return methodName;
+	return methodName;
     }
 
     public void setMethodName(String methodName) {
-        this.methodName = methodName;
+	this.methodName = methodName;
     }
 
     public String getPayerName() {
-        return payerName;
+	return payerName;
     }
 
     public void setPayerName(String payerName) {
-        this.payerName = payerName;
+	this.payerName = payerName;
     }
 
     public String getCard() {
-        return card;
+	return card;
     }
 
     public void setCard(String card) {
-        this.card = card;
+	this.card = card;
     }
 
     public String getCardBank() {
-        return cardBank;
+	return cardBank;
     }
 
     public void setCardBank(String cardBank) {
-        this.cardBank = cardBank;
+	this.cardBank = cardBank;
     }
 
     public Double getAmount() {
-        return amount;
+	return amount;
     }
 
     public void setAmount(Double amount) {
-        this.amount = amount;
+	this.amount = amount;
     }
 
     public Currency getCurrency() {
-        return currency;
+	return currency;
     }
 
     public void setCurrency(Currency currency) {
-        this.currency = currency;
+	this.currency = currency;
     }
 
     public String getInvoiceProductName() {
-        return invoiceProductName;
+	return invoiceProductName;
     }
 
     public void setInvoiceProductName(String invoiceProductName) {
-        this.invoiceProductName = invoiceProductName;
+	this.invoiceProductName = invoiceProductName;
     }
 
     public Integer getInvoiceQuantity() {
-        return invoiceQuantity;
+	return invoiceQuantity;
     }
 
     public void setInvoiceQuantity(Integer invoiceQuantity) {
-        this.invoiceQuantity = invoiceQuantity;
+	this.invoiceQuantity = invoiceQuantity;
     }
 
     public Double getInvoiceAmount() {
-        return invoiceAmount;
+	return invoiceAmount;
     }
 
     public void setInvoiceAmount(Double invoiceAmount) {
-        this.invoiceAmount = invoiceAmount;
+	this.invoiceAmount = invoiceAmount;
     }
 
     public Currency getInvoiceCurrency() {
-        return invoiceCurrency;
+	return invoiceCurrency;
     }
 
     public void setInvoiceCurrency(Currency invoiceCurrency) {
-        this.invoiceCurrency = invoiceCurrency;
+	this.invoiceCurrency = invoiceCurrency;
     }
 
     public String getInvoicePayeeName() {
-        return invoicePayeeName;
+	return invoicePayeeName;
     }
 
     public void setInvoicePayeeName(String invoicePayeeName) {
-        this.invoicePayeeName = invoicePayeeName;
+	this.invoicePayeeName = invoicePayeeName;
     }
 
     public String getInvoicePayeeEmail() {
-        return invoicePayeeEmail;
+	return invoicePayeeEmail;
     }
 
     public void setInvoicePayeeEmail(String invoicePayeeEmail) {
-        this.invoicePayeeEmail = invoicePayeeEmail;
+	this.invoicePayeeEmail = invoicePayeeEmail;
     }
 
     public PhoneNumber getInvoicePayeePhone() {
-        return invoicePayeePhone;
+	return invoicePayeePhone;
     }
 
     public void setInvoicePayeePhone(PhoneNumber invoicePayeePhone) {
-        this.invoicePayeePhone = invoicePayeePhone;
+	this.invoicePayeePhone = invoicePayeePhone;
     }
 
     public TaxpayerNumber getInvoicePayeeTaxpayerNumber() {
-        return invoicePayeeTaxpayerNumber;
+	return invoicePayeeTaxpayerNumber;
     }
 
     public void setInvoicePayeeTaxpayerNumber(TaxpayerNumber invoicePayeeTaxpayerNumber) {
-        this.invoicePayeeTaxpayerNumber = invoicePayeeTaxpayerNumber;
+	this.invoicePayeeTaxpayerNumber = invoicePayeeTaxpayerNumber;
     }
 
     public LocalizationLanguage getInvoiceLanguage() {
-        return invoiceLanguage;
+	return invoiceLanguage;
     }
 
     public void setInvoiceLanguage(LocalizationLanguage invoiceLanguage) {
-        this.invoiceLanguage = invoiceLanguage;
+	this.invoiceLanguage = invoiceLanguage;
     }
 }
