@@ -16,17 +16,17 @@
 
 	<properties>
 		<!-- BOMS -->
-		<javax-javaee-bom.version>20190126r2</javax-javaee-bom.version>
-		<java-commons.version>20190126r2</java-commons.version>
-		<payara-bom.version>20190126r2</payara-bom.version>
+		<javax-javaee-bom.version>CURRENT-SNAPSHOT</javax-javaee-bom.version>
+		<java-commons.version>CURRENT-SNAPSHOT</java-commons.version>
+		<payara-bom.version>CURRENT-SNAPSHOT</payara-bom.version>
 		<!-- tech -->
-		<javax-jpa-commons.version>20190126r2</javax-jpa-commons.version>
-		<patterns-domain.version>20190126r2</patterns-domain.version>
-		<lapsa-arquillian-test.version>20190126r2</lapsa-arquillian-test.version>
+		<javax-jpa-commons.version>CURRENT-SNAPSHOT</javax-jpa-commons.version>
+		<patterns-domain.version>CURRENT-SNAPSHOT</patterns-domain.version>
+		<lapsa-arquillian-test.version>CURRENT-SNAPSHOT</lapsa-arquillian-test.version>
 		<!-- oldies -->
-		<insurance-lib.version>20190126r2</insurance-lib.version>
-		<kz-lib.version>20190126r2</kz-lib.version>
-		<international-lib.version>20190126r2</international-lib.version>
+		<insurance-lib.version>CURRENT-SNAPSHOT</insurance-lib.version>
+		<kz-lib.version>CURRENT-SNAPSHOT</kz-lib.version>
+		<international-lib.version>CURRENT-SNAPSHOT</international-lib.version>
 		<!-- PLUGINS dependencies versions -->
 		<!-- version number copied from javax-javaee-web-bom -->
 		<javax.persistence.version>2.1.0</javax.persistence.version>
