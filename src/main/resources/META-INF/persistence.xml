@@ -22,7 +22,6 @@
 		<class>com.lapsa.insurance.domain.CalculationData</class>
 		<class>com.lapsa.insurance.domain.InsuranceProduct</class>
 		<class>com.lapsa.insurance.domain.InsurancePeriodData</class>
-		<class>com.lapsa.insurance.domain.PaymentData</class>
 		<class>com.lapsa.insurance.domain.PersonalData</class>
 		<class>com.lapsa.insurance.domain.crm.InetAddrData</class>
 		<class>com.lapsa.insurance.domain.IdentityCardData</class>
