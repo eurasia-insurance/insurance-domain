@@ -22,6 +22,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 import com.lapsa.insurance.domain.EntitySuperclass;
 import com.lapsa.insurance.domain.InsuranceProduct;
@@ -111,6 +112,19 @@ public class Policy extends InsuranceProduct {
 
     public void setNumber(String number) {
 	this.number = number;
+    }
+
+    // policyDate
+
+    @Transient
+    private LocalDate policyDate;
+
+    public LocalDate getPolicyDate() {
+	return policyDate;
+    }
+
+    public void setPolicyDate(LocalDate policyDate) {
+	this.policyDate = policyDate;
     }
 
     // dateOfIssue
