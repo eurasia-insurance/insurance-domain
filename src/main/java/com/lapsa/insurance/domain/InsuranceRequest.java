@@ -6,21 +6,19 @@ import java.util.Currency;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Table;
 
 import com.lapsa.insurance.elements.InsuranceProductType;
+import com.lapsa.insurance.elements.InsuranceRequestCancellationReason;
+import com.lapsa.insurance.elements.InsuranceRequestStatus;
 import com.lapsa.insurance.elements.InsuranceRequestType;
 import com.lapsa.international.localization.LocalizationLanguage;
 import com.lapsa.international.phone.PhoneNumber;
 
 import tech.lapsa.kz.taxpayer.TaxpayerNumber;
-
-import com.lapsa.insurance.elements.InsuranceRequestCancellationReason;
-import com.lapsa.insurance.elements.InsuranceRequestStatus;
 
 @Entity
 @Table(name = "INSURANCE_REQUEST")
@@ -56,15 +54,19 @@ public abstract class InsuranceRequest extends Request {
 
     @Basic
     @Column(name = "PAYMENT_REFERENCE")
-    private String reference;
+    private String paymentReference;
 
     @Basic
     @Column(name = "PAYMENT_INSTANT")
-    private Instant instant;
+    private Instant paymentInstant;
+
+    @Basic
+    @Column(name = "PAYMENT_CANCELED_INSTANT")
+    private Instant paymentCanceledInstant;
 
     @Basic
     @Column(name = "PAYMENT_METHOD_NAME")
-    private String methodName;
+    private String paymentMethodName;
 
     @Basic
     @Column(name = "PAYER_NAME")
@@ -72,19 +74,19 @@ public abstract class InsuranceRequest extends Request {
 
     @Basic
     @Column(name = "PAYMENT_CARD")
-    private String card;
+    private String paymentCard;
 
     @Basic
     @Column(name = "PAYMENT_CARD_BANK")
-    private String cardBank;
+    private String paymentCardBank;
 
     @Basic
     @Column(name = "PAYMENT_AMOUNT")
-    private Double amount;
+    private Double paymentAmount;
 
     @Basic
     @Column(name = "PAYMENT_CURRENCY")
-    private Currency currency;
+    private Currency paymentCurrency;
 
     @Basic
     @Column(name = "INVOICE_PRODUCT_NAME")
@@ -139,7 +141,7 @@ public abstract class InsuranceRequest extends Request {
     public InsuranceRequestStatus getInsuranceRequestStatus() {
 	return insuranceRequestStatus;
     }
-    
+
     public boolean insuranceRequestStatusIn(InsuranceRequestStatus... statuses) {
 	return Arrays.stream(statuses)
 		.anyMatch(it -> it.equals(getInsuranceRequestStatus()));
@@ -153,7 +155,8 @@ public abstract class InsuranceRequest extends Request {
 	return insuranceRequestCancellationReason;
     }
 
-    public void setInsuranceRequestCancellationReason(final InsuranceRequestCancellationReason insuranceRequestCancellationReason) {
+    public void setInsuranceRequestCancellationReason(
+	    final InsuranceRequestCancellationReason insuranceRequestCancellationReason) {
 	this.insuranceRequestCancellationReason = insuranceRequestCancellationReason;
     }
 
@@ -165,28 +168,66 @@ public abstract class InsuranceRequest extends Request {
 	this.invoiceNumber = invoiceNumber;
     }
 
+    @Deprecated
     public String getReference() {
-	return reference;
+	return getPaymentReference();
     }
 
+    @Deprecated
     public void setReference(String reference) {
-	this.reference = reference;
+	setPaymentReference(reference);
     }
 
+    public String getPaymentReference() {
+	return paymentReference;
+    }
+
+    public void setPaymentReference(String paymentReference) {
+	this.paymentReference = paymentReference;
+    }
+
+    @Deprecated
     public Instant getInstant() {
-	return instant;
+	return getPaymentInstant();
     }
 
+    @Deprecated
     public void setInstant(Instant instant) {
-	this.instant = instant;
+	setPaymentInstant(instant);
     }
 
+    public Instant getPaymentInstant() {
+	return paymentInstant;
+    }
+
+    public void setPaymentInstant(Instant paymentInstant) {
+	this.paymentInstant = paymentInstant;
+    }
+    
+    public Instant getPaymentCanceledInstant() {
+        return paymentCanceledInstant;
+    }
+
+    public void setPaymentCanceledInstant(Instant paymentCanceledInstant) {
+        this.paymentCanceledInstant = paymentCanceledInstant;
+    }
+
+    @Deprecated
     public String getMethodName() {
-	return methodName;
+	return getPaymentMethodName();
     }
 
+    @Deprecated
     public void setMethodName(String methodName) {
-	this.methodName = methodName;
+	setPaymentMethodName(methodName);
+    }
+
+    public String getPaymentMethodName() {
+	return paymentMethodName;
+    }
+
+    public void setPaymentMethodName(String paymentMethodName) {
+	this.paymentMethodName = paymentMethodName;
     }
 
     public String getPayerName() {
@@ -197,36 +238,76 @@ public abstract class InsuranceRequest extends Request {
 	this.payerName = payerName;
     }
 
+    @Deprecated
     public String getCard() {
-	return card;
+	return getPaymentCard();
     }
 
+    @Deprecated
     public void setCard(String card) {
-	this.card = card;
+	setPaymentCard(card);
     }
 
+    public String getPaymentCard() {
+	return paymentCard;
+    }
+
+    public void setPaymentCard(String paymentCard) {
+	this.paymentCard = paymentCard;
+    }
+
+    @Deprecated
     public String getCardBank() {
-	return cardBank;
+	return getPaymentCardBank();
     }
 
+    @Deprecated
     public void setCardBank(String cardBank) {
-	this.cardBank = cardBank;
+	setPaymentCardBank(cardBank);
     }
 
+    public String getPaymentCardBank() {
+        return paymentCardBank;
+    }
+
+    public void setPaymentCardBank(String paymentCardBank) {
+        this.paymentCardBank = paymentCardBank;
+    }
+
+    @Deprecated
     public Double getAmount() {
-	return amount;
+	return getPaymentAmount();
     }
 
+    @Deprecated
     public void setAmount(Double amount) {
-	this.amount = amount;
+	setPaymentAmount(amount);
     }
 
+    public Double getPaymentAmount() {
+	return paymentAmount;
+    }
+
+    public void setPaymentAmount(Double paymentAmount) {
+	this.paymentAmount = paymentAmount;
+    }
+
+    @Deprecated
     public Currency getCurrency() {
-	return currency;
+	return getPaymentCurrency();
     }
 
+    @Deprecated
     public void setCurrency(Currency currency) {
-	this.currency = currency;
+	setPaymentCurrency(currency);
+    }
+
+    public Currency getPaymentCurrency() {
+	return paymentCurrency;
+    }
+
+    public void setPaymentCurrency(Currency paymentCurrency) {
+	this.paymentCurrency = paymentCurrency;
     }
 
     public String getInvoiceProductName() {
