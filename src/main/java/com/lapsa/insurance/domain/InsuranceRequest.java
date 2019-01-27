@@ -78,7 +78,7 @@ public abstract class InsuranceRequest extends Request {
 
     @Basic
     @Column(name = "PAYMENT_CARD_BANK")
-    private String cardBank;
+    private String paymentCardBank;
 
     @Basic
     @Column(name = "PAYMENT_AMOUNT")
@@ -256,12 +256,22 @@ public abstract class InsuranceRequest extends Request {
 	this.paymentCard = paymentCard;
     }
 
+    @Deprecated
     public String getCardBank() {
-	return cardBank;
+	return getPaymentCardBank();
     }
 
+    @Deprecated
     public void setCardBank(String cardBank) {
-	this.cardBank = cardBank;
+	setPaymentCardBank(cardBank);
+    }
+
+    public String getPaymentCardBank() {
+        return paymentCardBank;
+    }
+
+    public void setPaymentCardBank(String paymentCardBank) {
+        this.paymentCardBank = paymentCardBank;
     }
 
     @Deprecated
